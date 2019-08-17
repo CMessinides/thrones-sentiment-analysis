@@ -16,6 +16,7 @@ def _createAliasDict(dict, name):
 
 	return dict
 
+ALL_NAMES = list(_characters.keys())
 ALIASES = reduce(_createAliasDict, list(_characters.keys()), {})
 ALIAS_PATTERN = re.compile('(' + '|'.join(list(ALIASES.keys())) + r')(?!\w)')
 
