@@ -1,6 +1,4 @@
-import os
 import logging
-from pathlib import Path
 
 import praw
 import pandas as pd
@@ -11,9 +9,8 @@ from lib.settings import (
     REDDIT_CLIENT_ID,
     REDDIT_CLIENT_SECRET,
     LOG_LEVEL,
+    DATA_DIR
 )
-
-DATA_DIR = Path(os.path.dirname(__file__)) / "data"
 
 logger = logging.getLogger(__name__)
 logger.basicConfig(level=LOG_LEVEL)
