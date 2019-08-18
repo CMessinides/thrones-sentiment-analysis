@@ -1,4 +1,6 @@
+import sys
 import logging
+from time import sleep
 
 import praw
 import pandas as pd
@@ -12,8 +14,8 @@ from lib.settings import (
     DATA_DIR
 )
 
+logging.basicConfig(level=LOG_LEVEL)
 logger = logging.getLogger(__name__)
-logger.basicConfig(level=LOG_LEVEL)
 
 reddit = praw.Reddit(
     username=REDDIT_USERNAME,
@@ -35,24 +37,46 @@ for thread in all_threads.itertuples():
     season = thread[3]
 
     submission = praw.models.Submission(reddit, url=href)
+
+    # Keep trying to load comments
+    while True:
+        try:
+            submission.comments.replace_more()
+            break
+        except:
+            logger.error("Unexpected error while retrieving more comments for thread {}: {}".format(submission.id, sys.exc_info()[0]))
+            logger.info("Trying again to retrieve comments for thread {}...".format(submission.id))
+            sleep(1)
+    
+    # remove any remaining "More Comments" threads
     submission.comments.replace_more(limit=0)
+
+    comments = submission.comments.list()
     logger.info(
-        "Loaded comments for thread %s (S%sE%s) at %s",
+        "Loaded %s comments for thread %s (S%sE%s) at %s",
+        len(comments),
         submission.id,
         season,
         episode,
         href,
     )
 
-    for comment in submission.comments.list():
+    prev_total = len(all_comments)
+    for comment in comments:
         cleaned_body = " ".join(comment.body.splitlines())
+
+        if cleaned_body in ['[deleted]', '[removed]']:
+            continue
+
         comment_tuple = (comment.id, submission.id, season, episode, cleaned_body)
         all_comments.append(comment_tuple)
 
+    new_total = len(all_comments)
     logger.info(
-        "Added comments for thread %s; total comments: %s",
+        "Added %s comments for thread %s; total comments: %s",
+        new_total - prev_total,
         submission.id,
-        len(all_comments),
+        new_total,
     )
 
 comments_frame = pd.DataFrame(

@@ -1,81 +1,318 @@
 {
-	"Alliser Thorne": ["Alliser", "Thorne"],
-	"Arya Stark": ["Arya"],
-	"Barristan Selmy": ["Barristan"],
-	"Benjen Stark": ["Benjen"],
-	"Beric Dondarrion": ["Beric", "Dondarrion"],
-	"Bran Stark": ["Bran"],
-	"Brienne of Tarth": ["Brienne"],
-	"Bronn": ["Bronn"],
-	"Brynden Tully": ["Brynden", "Blackfish"],
-	"Catelyn Stark": ["Catelyn", "Cat"],
-	"Cersei Lannister": ["Cersei"],
-	"Daario Naharis": ["Daario", "Naharis", "Dario"],
-	"Daenerys Targaryen": ["Daenerys", "Dany"],
-	"Davos Seaworth": ["Davos", "Onion Knight"],
-	"Edmure Tully": ["Edmure"],
-	"Ellaria Sand": ["Ellaria"],
-	"Euron Greyjoy": ["Euron"],
-	"Gendry": ["Gendry"],
-	"Gilly": ["Gilly"],
-	"Grand Maester Pycelle": ["Pycelle", "Pycel"],
-	"Gregor Clegane (“The Mountain”)": ["Gregor", "The Mountain"],
-	"Grey Worm": ["Greyworm", "Gray Worm", "Grayworm"],
-	"High Sparrow": ["High Sparrow"],
-	"Hodor": ["Hodor"],
-	"Jaime Lannister": ["Jaime", "Jamie"],
-	"Jaqen H'ghar": ["Jaqen", "H'ghar"],
-	"Jeor Mormont": ["Jeor"],
-	"Joffrey Baratheon": ["Joffrey"],
-	"Jojen Reed": ["Jojen"],
-	"Jon Snow": ["Jon"],
-	"Jorah Mormont": ["Jorah"],
-	"Khal Drogo": ["Drogo"],
-	"Lancel Lannister": ["Lancel"],
-	"Locke": ["Locke"],
-	"Loras Tyrell": ["Loras"],
-	"Lyanna Mormont": ["Lyanna Mormont"],
-	"Lysa Arryn": ["Lysa"],
-	"Maester Aemon": ["Aemon"],
-	"Maester Luwin": ["Luwin"],
-	"Mance Rayder": ["Mance"],
-	"Margaery Tyrell": ["Margaery", "Marge"],
-	"Meera Reed": ["Meera"],
-	"Melisandre": ["Melisandre", "Mel"],
-	"Meryn Trant": ["Meryn Trant"],
-	"Missandei": ["Missandei"],
-	"Ned Stark": ["Ned", "Eddard"],
-	"Night King": ["Night King"],
-	"Oberyn Martell": ["Oberyn"],
-	"Olenna Tyrell": ["Olenna"],
-	"Olly": ["Olly"],
-	"Osha": ["Osha"],
-	"Petyr Baelish (“Littlefinger”)": ["Petyr", "Baelish", "Littlefinger"],
-	"Podrick Payne": ["Podrick", "Pod"],
-	"Qyburn": ["Qyburn"],
-	"Ramsay Snow": ["Ramsay"],
-	"Randyll Tarly": ["Randyll"],
-	"Renly Baratheon": ["Renly"],
-	"Rickon Stark": ["Rickon"],
-	"Robb Stark": ["Robb"],
-	"Robert Baratheon": ["Robert"],
-	"Robin Arryn": ["Robin"],
-	"Roose Bolton": ["Roose"],
-	"Samwell Tarly": ["Samwell", "Sam"],
-	"Sandor Clegane (“The Hound”)": ["Sandor", "The Hound"],
-	"Sansa Stark": ["Sansa"],
-	"Shae": ["Shae"],
-	"Shireen Baratheon": ["Shireen"],
-	"Stannis Baratheon": ["Stannis"],
-	"Talisa Stark": ["Talisa"],
-	"Theon Greyjoy": ["Theon"],
-	"Thoros of Myr": ["Thoros"],
-	"Tommen Baratheon": ["Tommen"],
-	"Tormund Giantsbane": ["Tormund"],
-	"Tyrion Lannister": ["Tyrion"],
-	"Tywin Lannister": ["Tywin"],
-	"Varys": ["Varys"],
-	"Walder Frey": ["Walder"],
-	"Yara Greyjoy": ["Yara"],
-	"Ygritte": []
+	"Alliser Thorne": {
+		"caseInsensitive": ["Alliser", "Thorne"],
+		"caseSensitive": []
+	},
+	"Arya Stark": {
+		"caseInsensitive": ["Arya"],
+		"caseSensitive": []
+	},
+	"Barristan Selmy": {
+		"caseInsensitive": ["Barristan", "Selmy"],
+		"caseSensitive": []
+	},
+	"Benjen Stark": {
+		"caseInsensitive": ["Benjen"],
+		"caseSensitive": []
+	},
+	"Beric Dondarrion": {
+		"caseInsensitive": ["Beric", "Dondarrion"],
+		"caseSensitive": []
+	},
+	"Bran Stark": {
+		"caseInsensitive": ["Bran"],
+		"caseSensitive": []
+	},
+	"Brienne of Tarth": {
+		"caseInsensitive": ["Brienne"],
+		"caseSensitive": []
+	},
+	"Bronn": {
+		"caseInsensitive": ["Bronn"],
+		"caseSensitive": []
+	},
+	"Brynden Tully": {
+		"caseInsensitive": ["Brynden", "Blackfish"],
+		"caseSensitive": []
+	},
+	"Catelyn Stark": {
+		"caseInsensitive": ["Catelyn"],
+		"caseSensitive": ["Cat"]
+	},
+	"Cersei Lannister": {
+		"caseInsensitive": ["Cersei", "Cercei"],
+		"caseSensitive": []
+	},
+	"Daario Naharis": {
+		"caseInsensitive": ["Daario", "Naharis", "Dario"],
+		"caseSensitive": []
+	},
+	"Daenerys Targaryen": {
+		"caseInsensitive": ["Daenerys", "Dany", "Danny"],
+		"caseSensitive": []
+	},
+	"Davos Seaworth": {
+		"caseInsensitive": ["Davos", "Onion Knight"],
+		"caseSensitive": []
+	},
+	"Edmure Tully": {
+		"caseInsensitive": ["Edmure"],
+		"caseSensitive": []
+	},
+	"Ellaria Sand": {
+		"caseInsensitive": ["Ellaria"],
+		"caseSensitive": []
+	},
+	"Euron Greyjoy": {
+		"caseInsensitive": ["Euron"],
+		"caseSensitive": []
+	},
+	"Gendry": {
+		"caseInsensitive": ["Gendry"],
+		"caseSensitive": []
+	},
+	"Gilly": {
+		"caseInsensitive": ["Gilly"],
+		"caseSensitive": []
+	},
+	"Grand Maester Pycelle": {
+		"caseInsensitive": ["Pycelle", "Pycel"],
+		"caseSensitive": []
+	},
+	"Gregor Clegane (\u201cThe Mountain\u201d)": {
+		"caseInsensitive": ["Gregor"],
+		"caseSensitive": ["Mountain"]
+	},
+	"Grey Worm": {
+		"caseInsensitive": ["Grey Worm", "Greyworm", "Gray Worm", "Grayworm"],
+		"caseSensitive": []
+	},
+	"High Sparrow": {
+		"caseInsensitive": ["High Sparrow"],
+		"caseSensitive": []
+	},
+	"Hodor": {
+		"caseInsensitive": ["Hodor", "Willis"],
+		"caseSensitive": []
+	},
+	"Jaime Lannister": {
+		"caseInsensitive": ["Jaime", "Jamie"],
+		"caseSensitive": []
+	},
+	"Jaqen H'ghar": {
+		"caseInsensitive": ["Jaqen", "H'ghar"],
+		"caseSensitive": []
+	},
+	"Jeor Mormont": {
+		"caseInsensitive": ["Jeor"],
+		"caseSensitive": []
+	},
+	"Joffrey Baratheon": {
+		"caseInsensitive": ["Joffrey", "Joff"],
+		"caseSensitive": []
+	},
+	"Jojen Reed": {
+		"caseInsensitive": ["Jojen"],
+		"caseSensitive": []
+	},
+	"Jon Snow": {
+		"caseInsensitive": ["Jon"],
+		"caseSensitive": []
+	},
+	"Jorah Mormont": {
+		"caseInsensitive": ["Jorah"],
+		"caseSensitive": []
+	},
+	"Khal Drogo": {
+		"caseInsensitive": ["Drogo"],
+		"caseSensitive": []
+	},
+	"Lancel Lannister": {
+		"caseInsensitive": ["Lancel"],
+		"caseSensitive": []
+	},
+	"Locke": {
+		"caseInsensitive": ["Locke"],
+		"caseSensitive": []
+	},
+	"Loras Tyrell": {
+		"caseInsensitive": ["Loras"],
+		"caseSensitive": []
+	},
+	"Lyanna Mormont": {
+		"caseInsensitive": ["Lyanna Mormont"],
+		"caseSensitive": []
+	},
+	"Lysa Arryn": {
+		"caseInsensitive": ["Lysa"],
+		"caseSensitive": []
+	},
+	"Maester Aemon": {
+		"caseInsensitive": ["Aemon"],
+		"caseSensitive": []
+	},
+	"Maester Luwin": {
+		"caseInsensitive": ["Luwin"],
+		"caseSensitive": []
+	},
+	"Mance Rayder": {
+		"caseInsensitive": ["Mance", "Rayder"],
+		"caseSensitive": []
+	},
+	"Margaery Tyrell": {
+		"caseInsensitive": ["Margaery", "Marge"],
+		"caseSensitive": []
+	},
+	"Meera Reed": {
+		"caseInsensitive": ["Meera"],
+		"caseSensitive": []
+	},
+	"Melisandre": {
+		"caseInsensitive": ["Melisandre", "Mel"],
+		"caseSensitive": []
+	},
+	"Meryn Trant": {
+		"caseInsensitive": ["Meryn Trant"],
+		"caseSensitive": []
+	},
+	"Missandei": {
+		"caseInsensitive": ["Missandei"],
+		"caseSensitive": []
+	},
+	"Ned Stark": {
+		"caseInsensitive": ["Ned", "Eddard"],
+		"caseSensitive": []
+	},
+	"Night King": {
+		"caseInsensitive": ["Night King", "Night's King", "Nights King"],
+		"caseSensitive": ["NK"]
+	},
+	"Oberyn Martell": {
+		"caseInsensitive": ["Oberyn"],
+		"caseSensitive": []
+	},
+	"Olenna Tyrell": {
+		"caseInsensitive": ["Olenna"],
+		"caseSensitive": []
+	},
+	"Olly": {
+		"caseInsensitive": ["Olly"],
+		"caseSensitive": []
+	},
+	"Osha": {
+		"caseInsensitive": ["Osha"],
+		"caseSensitive": []
+	},
+	"Petyr Baelish (\u201cLittlefinger\u201d)": {
+		"caseInsensitive": ["Petyr", "Peter", "Baelish", "Littlefinger"],
+		"caseSensitive": []
+	},
+	"Podrick Payne": {
+		"caseInsensitive": ["Podrick"],
+		"caseSensitive": ["Pod"]
+	},
+	"Qyburn": {
+		"caseInsensitive": ["Qyburn"],
+		"caseSensitive": []
+	},
+	"Ramsay Snow": {
+		"caseInsensitive": ["Ramsay"],
+		"caseSensitive": []
+	},
+	"Randyll Tarly": {
+		"caseInsensitive": ["Randyll"],
+		"caseSensitive": []
+	},
+	"Renly Baratheon": {
+		"caseInsensitive": ["Renly"],
+		"caseSensitive": []
+	},
+	"Rickon Stark": {
+		"caseInsensitive": ["Rickon"],
+		"caseSensitive": []
+	},
+	"Robb Stark": {
+		"caseInsensitive": ["Robb"],
+		"caseSensitive": []
+	},
+	"Robert Baratheon": {
+		"caseInsensitive": ["Robert"],
+		"caseSensitive": []
+	},
+	"Robin Arryn": {
+		"caseInsensitive": ["Robin"],
+		"caseSensitive": []
+	},
+	"Roose Bolton": {
+		"caseInsensitive": ["Roose"],
+		"caseSensitive": []
+	},
+	"Samwell Tarly": {
+		"caseInsensitive": ["Samwell", "Sam"],
+		"caseSensitive": []
+	},
+	"Sandor Clegane (\u201cThe Hound\u201d)": {
+		"caseInsensitive": ["Sandor", "The Hound"],
+		"caseSensitive": []
+	},
+	"Sansa Stark": {
+		"caseInsensitive": ["Sansa"],
+		"caseSensitive": []
+	},
+	"Shae": {
+		"caseInsensitive": ["Shae"],
+		"caseSensitive": []
+	},
+	"Shireen Baratheon": {
+		"caseInsensitive": ["Shireen"],
+		"caseSensitive": []
+	},
+	"Stannis Baratheon": {
+		"caseInsensitive": ["Stannis"],
+		"caseSensitive": []
+	},
+	"Talisa Stark": {
+		"caseInsensitive": ["Talisa"],
+		"caseSensitive": []
+	},
+	"Theon Greyjoy": {
+		"caseInsensitive": ["Theon"],
+		"caseSensitive": []
+	},
+	"Thoros of Myr": {
+		"caseInsensitive": ["Thoros"],
+		"caseSensitive": []
+	},
+	"Tommen Baratheon": {
+		"caseInsensitive": ["Tommen"],
+		"caseSensitive": []
+	},
+	"Tormund Giantsbane": {
+		"caseInsensitive": ["Tormund"],
+		"caseSensitive": []
+	},
+	"Tyrion Lannister": {
+		"caseInsensitive": ["Tyrion"],
+		"caseSensitive": []
+	},
+	"Tywin Lannister": {
+		"caseInsensitive": ["Tywin"],
+		"caseSensitive": []
+	},
+	"Varys": {
+		"caseInsensitive": ["Varys"],
+		"caseSensitive": []
+	},
+	"Walder Frey": {
+		"caseInsensitive": ["Walder"],
+		"caseSensitive": []
+	},
+	"Yara Greyjoy": {
+		"caseInsensitive": ["Yara"],
+		"caseSensitive": []
+	},
+	"Ygritte": {
+		"caseInsensitive": ["Ygritte"],
+		"caseSensitive": []
+	}
 }

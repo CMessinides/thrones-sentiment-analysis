@@ -6,22 +6,23 @@ from .settings import DATA_DIR
 
 _characters = json.load(open(DATA_DIR / 'characters.json', 'r'))
 
-def _createAliasDict(dict, name):
-	aliases = _characters[name]
-	if len(aliases) == 0:
-		aliases = [name]
+_all_aliases = {}
+_case_required_aliases = []
+_case_optional_aliases = []
+for name, aliases in _characters.items():
+	_case_required_aliases.extend(aliases['caseSensitive'])
+	_case_optional_aliases.extend(aliases['caseInsensitive'])
+	combined_aliases = map((lambda s: s.lower()), aliases['caseSensitive'] + aliases['caseInsensitive'])
+	for alias in combined_aliases:
+		_all_aliases[alias] = name
 
-	for alias in aliases:
-		dict[alias] = name
-
-	return dict
+_case_required_pattern = re.compile(r'(?:\W|^)(' + '|'.join(_case_required_aliases) + r')(?:s|\W|$)')
+_case_optional_pattern = re.compile(r'(?:\W|^)(' + '|'.join(_case_optional_aliases) + r')(?:s|\W|$)', re.IGNORECASE)
 
 ALL_NAMES = list(_characters.keys())
-ALIASES = reduce(_createAliasDict, list(_characters.keys()), {})
-ALIAS_PATTERN = re.compile('(' + '|'.join(list(ALIASES.keys())) + r')(?!\w)')
 
 def findAllMentionedCharacters(text):
-	matches = ALIAS_PATTERN.findall(text)
-	canonical_matches = map((lambda m: ALIASES[m]), matches)
+	matches = _case_required_pattern.findall(text) + _case_optional_pattern.findall(text)
+	canonical_matches = map((lambda m: _all_aliases[m.lower()]), matches)
 	unique_matches = list(set(canonical_matches))
 	return unique_matches
