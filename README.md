@@ -1,5 +1,4 @@
 # Cripples, Bastards, and Sentiment Analysis
-*Tracking trends in fan responses to characters from HBO&rsquo;s* Game of Thrones.
 
 <div style="background-color:#ffd97d;color:#6d4511;padding:0.5em 2em;border:1px currentColor solid;border-radius:8px">
 
@@ -123,7 +122,7 @@ Datasets (`./data`)
 
 - **`comment-sentiments.csv`** records the sentiment analysis score of each comment. This score is calculated using [VADER](https://github.com/cjhutto/vaderSentiment), a sentiment analysis tool designed specifically for social media content like Reddit comments. Each row includes the comment ID along with the compound sentiment score output by VADER. This data is updated automatically by `scripts/analyze.py` (see [&ldquo;Scripts&rdquo;](#heading-scripts)).
 
-- **`data/character-mentions.csv`** records every mention of a character in the corpus of comments. Each row includes the character&rsquo;s canonical name, the ID of the comment that contains the mention, the sentence in the comment that mentions the character, and the compound sentiment score for that sentence. This data is updated automatically by `scripts/analyze.py` (see [&ldquo;Scripts&rdquo;](#heading-scripts)).
+- **`character-mentions.csv`** records every mention of a character in the corpus of comments. Each row includes the character&rsquo;s canonical name, the ID of the comment that contains the mention, the sentence in the comment that mentions the character, and the compound sentiment score for that sentence. This data is updated automatically by `scripts/analyze.py` (see [&ldquo;Scripts&rdquo;](#heading-scripts)).
 
 - **`mean-scores.json`** records the mean compound sentiment score of every episode, both overall and by character. It also contains confidence intervals for each mean, and for each episode, it includes the proportion of total character mentions that went to each character (with at least 30 mentions). This data is updated automatically by `scripts/transform.py` (see [&ldquo;Scripts&rdquo;](#heading-scripts)).
 
