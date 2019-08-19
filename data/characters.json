@@ -31,7 +31,7 @@
 		"caseInsensitive": ["Bronn"],
 		"caseSensitive": []
 	},
-	"Brynden Tully": {
+	"Brynden Tully (\u201cThe Blackfish\u201d)": {
 		"caseInsensitive": ["Brynden", "Blackfish"],
 		"caseSensitive": []
 	},
@@ -55,6 +55,10 @@
 		"caseInsensitive": ["Davos", "Onion Knight"],
 		"caseSensitive": []
 	},
+	"Drogon": {
+		"caseInsensitive": ["Drogon"],
+		"caseSensitive": []
+	},
 	"Edmure Tully": {
 		"caseInsensitive": ["Edmure"],
 		"caseSensitive": []
@@ -70,6 +74,10 @@
 	"Gendry": {
 		"caseInsensitive": ["Gendry"],
 		"caseSensitive": []
+	},
+	"Ghost": {
+		"caseInsensitive": [],
+		"caseSensitive": ["Ghost"]
 	},
 	"Gilly": {
 		"caseInsensitive": ["Gilly"],
@@ -92,7 +100,7 @@
 		"caseSensitive": []
 	},
 	"Hodor": {
-		"caseInsensitive": ["Hodor", "Willis"],
+		"caseInsensitive": ["Hodor", "Wylis"],
 		"caseSensitive": []
 	},
 	"Jaime Lannister": {
@@ -184,7 +192,7 @@
 		"caseSensitive": []
 	},
 	"Night King": {
-		"caseInsensitive": ["Night King", "Night's King", "Nights King"],
+		"caseInsensitive": ["Night King"],
 		"caseSensitive": ["NK"]
 	},
 	"Oberyn Martell": {
@@ -215,7 +223,7 @@
 		"caseInsensitive": ["Qyburn"],
 		"caseSensitive": []
 	},
-	"Ramsay Snow": {
+	"Ramsay Bolton": {
 		"caseInsensitive": ["Ramsay"],
 		"caseSensitive": []
 	},
@@ -225,6 +233,10 @@
 	},
 	"Renly Baratheon": {
 		"caseInsensitive": ["Renly"],
+		"caseSensitive": []
+	},
+	"Rhaegal": {
+		"caseInsensitive": ["Rhaegal"],
 		"caseSensitive": []
 	},
 	"Rickon Stark": {
@@ -276,7 +288,7 @@
 		"caseSensitive": []
 	},
 	"Theon Greyjoy": {
-		"caseInsensitive": ["Theon"],
+		"caseInsensitive": ["Theon", "Reek"],
 		"caseSensitive": []
 	},
 	"Thoros of Myr": {
@@ -301,6 +313,10 @@
 	},
 	"Varys": {
 		"caseInsensitive": ["Varys"],
+		"caseSensitive": []
+	},
+	"Viserion": {
+		"caseInsensitive": ["Viserion"],
 		"caseSensitive": []
 	},
 	"Walder Frey": {
