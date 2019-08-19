@@ -1,0 +1,19 @@
+{
+  "name": "thrones-sentiment-analysis",
+  "version": "1.0.0",
+  "description": "A sentiment analysis of Reddit comments about HBO's Game of Thrones.",
+  "main": "index.js",
+  "author": "Cameron Messinides <me@cmessinides.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CMessinides/thrones-sentiment-analysis.git"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "scripts:scrape": "pipenv run python scripts/scrape.py",
+    "scripts:analyze": "pipenv run python scripts/analyze.py",
+    "scripts:transform": "pipenv run python scripts/transform.py",
+    "scripts:all": "yarn scripts:scrape && yarn scripts:analyze && yarn scripts:transform"
+  }
+}
