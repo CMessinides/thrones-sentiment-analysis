@@ -6,7 +6,7 @@
 
 </div>
 
-Can we understand how fan responses to characters from HBO&rsquo;s [*Game of Thrones*](https://www.hbo.com/game-of-thrones) changed over time by analyzing their Reddit comments? This repository contains scripts and data files from my attempt to answer that question.
+What can Reddit comments from fans of HBO&rsquo;s [*Game of Thrones*](https://www.hbo.com/game-of-thrones) tell us about how their emotional responses to the show&rsquo;s characters changed over time? This repository contains scripts and data files from my attempt to answer that question.
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@ Can we understand how fan responses to characters from HBO&rsquo;s [*Game of Thr
 	- [Configuration](#heading-config)
 	- [Running scripts](#heading-running-scripts)
 - [Project Overview](#heading-overview)
-	- [Datasets](#heading-data)
+	- [Data sets](#heading-data)
 	- [Scripts](#heading-scripts)
 - [Citations](#heading-citations)
 - [License](#heading-license)
@@ -110,7 +110,7 @@ You can also run the Python scripts directly using Pipenv (ex. `pipenv run pytho
 
 <h3 id="heading-data">
 
-Datasets (`./data`)
+Data sets (`./data`)
 
 </h3>
 
@@ -132,11 +132,11 @@ Scripts (`./scripts`)
 
 </h3>
 
-- **`scrape.py`** uses the Reddit API to collect comments from the episode discussion threads in `data/threads.csv` (see [&ldquo;Datasets&rdquo;](#heading-data)). Note that due to time and storage limitations, this script does not collect all comments from every thread. This script is responsible for updating the corpus of comments in `data/comments.csv`.
+- **`scrape.py`** uses the Reddit API to collect comments from the episode discussion threads in `data/threads.csv` (see [&ldquo;Data sets&rdquo;](#heading-data)). Note that due to time and storage limitations, this script does not collect all comments from every thread. This script is responsible for updating the corpus of comments in `data/comments.csv`.
 
-- **`analyze.py`** uses VADER to calculate sentiment scores from all the scraped comments as well as from any sentence in those comments which mentions one of the characters in `data/characters.json` (see [&ldquo;Datasets&rdquo;](#heading-data)). This script is responsible for updating the records in `data/comment-sentiments.csv` and `data/character-mentions.csv`.
+- **`analyze.py`** uses VADER to calculate sentiment scores from all the scraped comments as well as from any sentence in those comments which mentions one of the characters in `data/characters.json` (see [&ldquo;Data sets&rdquo;](#heading-data)). This script is responsible for updating the records in `data/comment-sentiments.csv` and `data/character-mentions.csv`.
 
-- **`transform.py`** uses the prior sentiment analysis to produce a summary of mean scores, confidence intervals, and proportions of character mentions that went to each character for each episode. This script is responsible for updating `data/mean-scores.json` (see [&ldquo;Datasets&rdquo;](#heading-data)).
+- **`transform.py`** uses the prior sentiment analysis to produce a summary of mean scores, confidence intervals, and proportions of character mentions that went to each character for each episode. This script is responsible for updating `data/mean-scores.json` (see [&ldquo;Data sets&rdquo;](#heading-data)).
 
 <h2 id="heading-citations">Citations</h2>
 
