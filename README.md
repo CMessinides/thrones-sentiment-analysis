@@ -1,4 +1,4 @@
-# Cripples, Bastards, and Sentiment Analysis
+# Game of Thrones Fan Comments: A Sentiment Analysis
 
 <div style="background-color:#ffd97d;color:#6d4511;padding:0.5em 2em;border:1px currentColor solid;border-radius:8px">
 
@@ -114,17 +114,17 @@ Datasets (`./data`)
 
 </h3>
 
-- **`comments.csv`** contains the corpus of Reddit comments used for this analysis. There are approximately 300,000 comments from episode discussion threads posted in three *Game of Thrones*-related subreddits: [/r/gameofthrones](https://www.reddit.com/r/gameofthrones) (all seasons), [r/asoiaf](https://www.reddit.com/r/asoiaf) (all seasons), and [/r/freefolk](https://wwww.reddit.com/r/freefolk) (Season 8 only). This data is collected automatically by `scripts/scrape.py` (see [&ldquo;Scripts&rdquo;](#heading-scripts)).
+- **`comments.csv`** contains the corpus of Reddit comments used for this analysis. There are approximately 300,000 comments from episode discussion threads posted in three *Game of Thrones*-related subreddits: [/r/gameofthrones](https://www.reddit.com/r/gameofthrones) (all seasons), [r/asoiaf](https://www.reddit.com/r/asoiaf) (all seasons), and [/r/freefolk](https://wwww.reddit.com/r/freefolk) (Season 8 only). These data are collected automatically by `scripts/scrape.py` (see [&ldquo;Scripts&rdquo;](#heading-scripts)).
 
-- **`threads.csv`** contains the list of episode discussion threads to scrape for comments. This data is updated by hand.
+- **`threads.csv`** contains the list of episode discussion threads to scrape for comments. This file is updated by hand.
 
-- **`characters.json`** contains the list of *Game of Thrones* characters to search for in the comments. The list includes the characters&rsquo; canonical (i.e. &ldquo;real&rdquo;) names and any corresponding aliases (first names, nicknames, common misspellings, etc.) they might go by. This data is updated by hand.
+- **`characters.json`** contains the list of *Game of Thrones* characters to search for in the comments. The list includes the characters&rsquo; canonical (i.e. &ldquo;real&rdquo;) names and any corresponding aliases (first names, nicknames, common misspellings, etc.) they might go by. This file is updated by hand.
 
-- **`comment-sentiments.csv`** records the sentiment analysis score of each comment. This score is calculated using [VADER](https://github.com/cjhutto/vaderSentiment), a sentiment analysis tool designed specifically for social media content like Reddit comments. Each row includes the comment ID along with the compound sentiment score output by VADER. This data is updated automatically by `scripts/analyze.py` (see [&ldquo;Scripts&rdquo;](#heading-scripts)).
+- **`comment-sentiments.csv`** records the sentiment analysis score of each comment. This score is calculated using [VADER](https://github.com/cjhutto/vaderSentiment), a sentiment analysis tool designed specifically for social media content like Reddit comments. Each row includes the comment ID along with the compound sentiment score output by VADER. This file is updated automatically by `scripts/analyze.py` (see [&ldquo;Scripts&rdquo;](#heading-scripts)).
 
-- **`character-mentions.csv`** records every mention of a character in the corpus of comments. Each row includes the character&rsquo;s canonical name, the ID of the comment that contains the mention, the sentence in the comment that mentions the character, and the compound sentiment score for that sentence. This data is updated automatically by `scripts/analyze.py` (see [&ldquo;Scripts&rdquo;](#heading-scripts)).
+- **`character-mentions.csv`** records every mention of a character in the corpus of comments. Each row includes the character&rsquo;s canonical name, the ID of the comment that contains the mention, the sentence in the comment that mentions the character, and the compound sentiment score for that sentence. This file is updated automatically by `scripts/analyze.py` (see [&ldquo;Scripts&rdquo;](#heading-scripts)).
 
-- **`mean-scores.json`** records the mean compound sentiment score of every episode, both overall and by character. It also contains confidence intervals for each mean, and for each episode, it includes the proportion of total character mentions that went to each character (with at least 30 mentions). This data is updated automatically by `scripts/transform.py` (see [&ldquo;Scripts&rdquo;](#heading-scripts)).
+- **`mean-scores.json`** records the mean compound sentiment score of every episode, both overall and by character. It also contains confidence intervals for each mean, and for each episode, it includes the proportion of total character mentions that went to each character (with at least 30 mentions). This file is updated automatically by `scripts/transform.py` (see [&ldquo;Scripts&rdquo;](#heading-scripts)).
 
 <h3 id="heading-scripts">
 
@@ -136,7 +136,7 @@ Scripts (`./scripts`)
 
 - **`analyze.py`** uses VADER to calculate sentiment scores from all the scraped comments as well as from any sentence in those comments which mentions one of the characters in `data/characters.json` (see [&ldquo;Datasets&rdquo;](#heading-data)). This script is responsible for updating the records in `data/comment-sentiments.csv` and `data/character-mentions.csv`.
 
-- **`transform.py`** uses the prior sentiment analysis to produce a data file with mean scores, confidence intervals, and mention proportions for the client visualization/interactive. This script is responsible for updating `data/mean-scores.json` (see [&ldquo;Datasets&rdquo;](#heading-data)).
+- **`transform.py`** uses the prior sentiment analysis to produce a summary of mean scores, confidence intervals, and proportions of character mentions that went to each character for each episode. This script is responsible for updating `data/mean-scores.json` (see [&ldquo;Datasets&rdquo;](#heading-data)).
 
 <h2 id="heading-citations">Citations</h2>
 
