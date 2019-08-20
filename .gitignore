@@ -3,3 +3,6 @@
 .Rproj.user
 .RData
 .Rhistory
+.cache
+dist
+node_modules

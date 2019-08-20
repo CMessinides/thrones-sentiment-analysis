@@ -1,0 +1,5 @@
+a {
+	@apply text-purple-700;
+	text-decoration: underline;
+	text-decoration-skip-ink: auto;
+}
