@@ -1,10 +1,8 @@
 # Game of Thrones Fan Comments: A Sentiment Analysis
 
-<div style="background-color:#ffd97d;color:#6d4511;padding:0.5em 2em;border:1px currentColor solid;border-radius:8px">
+![](screenshot.png)
 
 **WARNING**: This README and this repository contain spoilers for the *Game of Thrones* television series.
-
-</div>
 
 What can Reddit comments from fans of HBO&rsquo;s [*Game of Thrones*](https://www.hbo.com/game-of-thrones) tell us about how their emotional responses to the show&rsquo;s characters changed over time? This repository contains scripts and data files from my attempt to answer that question.
 
