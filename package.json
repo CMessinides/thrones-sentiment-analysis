@@ -23,16 +23,13 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^9.6.1",
+    "core-js": "^3.2.1",
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-json-url-loader": "^0.1.2"
   },
   "dependencies": {
-    "base.css": "^1.0.0",
-    "core-js": "^3.2.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "regenerator-runtime": "^0.13.3",
-    "tailwindcss": "^1.1.2",
-    "victory": "^32.3.7"
+    "tailwindcss": "^1.1.2"
   }
 }
