@@ -1,0 +1,14 @@
+.c-section {
+	@apply p-5;
+}
+
+.c-section--text {
+	@apply bg-white;
+	@apply text-gray-900;
+}
+
+@screen md {
+	.c-section {
+		@apply py-10;
+	}
+}

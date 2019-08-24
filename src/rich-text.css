@@ -1,0 +1,46 @@
+.o-rich-text {
+	@apply text-base;
+}
+
+@screen sm {
+	.o-rich-text {
+		@apply text-lg;
+	}
+}
+
+.o-rich-text * + * {
+	margin-top: 0.75em;
+}
+
+.o-rich-text * + h2 {
+	margin-top: 1.5em;
+}
+
+.o-rich-text aside {
+	@apply border-t-4;
+	@apply border-b;
+	@apply border-double;
+	@apply border-orange-600;
+	border-bottom-style: solid;
+	padding-top: 0.75em;
+	padding-bottom: 0.75em;
+	font-size: 0.875em;
+}
+
+.o-rich-text aside * + * {
+	margin-top: 0.5em;
+}
+
+.o-rich-text h2,
+.o-rich-text h3,
+.o-rich-text h4,
+.o-rich-text h5,
+.o-rich-text h6 {
+	@apply font-bold;
+	@apply font-heading;
+}
+
+.o-rich-text h2 {
+	@apply leading-tight;
+	font-size: 1.5em;
+}

@@ -32,6 +32,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "regenerator-runtime": "^0.13.3",
-    "tailwindcss": "^1.1.2"
+    "tailwindcss": "^1.1.2",
+    "victory": "^32.3.7"
   }
 }

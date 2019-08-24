@@ -16,8 +16,8 @@
 		<article>
 			<header class="text-center px-5 border-b-8 border-purple-700 border-double">
 				<div class="my-16 md:my-24">
-					<h1 class="max-w-5xl mx-auto font-bold font-heading leading-tight text-gray-900 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">The <cite class="italic font-body text-purple-700">Game of Thrones</cite> Characters that Fans Love (to&nbsp;Hate)</h1>
-					<div class="max-w-2xl mx-auto">
+					<h1 class="o-container o-container--wide font-bold font-heading leading-tight text-gray-900 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">The <cite class="italic font-body text-purple-700">Game of Thrones</cite> Characters that Fans Love (to&nbsp;Hate)</h1>
+					<div class="o-container">
 						<p class="mt-5 sm:text-xl md:text-2xl text-lg">A sentiment analysis of over 300,000 Reddit comments reveals how fans <em>really</em> feel about characters from HBO&rsquo;s blockbuster series.</p>
 						<p class="mt-5 sm:text-base text-sm tracking-wider uppercase">A visual essay by <a href="https://www.cmessinides.com" rel="noopener" target="_blank">Cameron Messinides</a></p>
 					</div>
@@ -25,16 +25,48 @@
 				<span class="inline-block mb-5 text-purple-700 italic">(Spoilers!)</span>
 				<img src="./src/static/characters.png" class="block mx-auto" alt="" width="420" height="90" style="opacity:0.9">
 			</header>
-			<div class="sm:text-lg md:text-xl p-5 md:py-10 bg-white text-gray-900">
-				<div class="mx-auto max-w-2xl">
+			<div class="c-section c-section--text">
+				<div class="o-container o-rich-text">
 					<p>
-						The online conversations about HBO&rsquo;s <a href="https://www.hbo.com/game-of-thrones" rel="noopener" target="_blank"><cite>Game of Thrones</cite></a>
-						are nothing if not lively.
+						Which <cite>Game of Thrones</cite> character inspired the most hatred among the fans?
+						Cersei? Ramsay? Surely Joffrey and his sneers must have earned him the title, right?
+						And how about the reverse: which characters were perennial fan favorites? Tormund?
+						Arya? Pod the Rod?
 					</p>
+					<p>
+						I found myself asking these questions recently. In July, I finished watching through the
+						series for the first time, and because I&rsquo;m late to the game, I wondered if the
+						way I felt about various characters or moments was in line with how fans had reacted
+						to the show as it unfolded in real time.
+					</p>
+					<h2>What is Sentiment Analysis?</h2>
+					<aside>
+						<p>
+							Case in point: an earlier draft of this essay included Ghost,
+							Jon&rsquo;s direwolf, as a character &mdash; that was, until I checked the results and found
+							that on average, sentences that mentioned Ghost were by far the most negative of any character.
+							That&rsquo;s because the word &ldquo;ghost&rdquo; has
+							<a href="https://github.com/cjhutto/vaderSentiment/blob/b045da3c5a29ed130777a16dc78588f53da54a05/vaderSentiment/vader_lexicon.txt#L3254">
+								a moderately negative sentiment rating of -1.3 in VADER
+							</a>.
+						</p>
+						<p>
+							In an ideal world, I would use a sentiment analyzer tuned to the language of
+							<cite>Game of Thrones</cite>, where &ldquo;Ghost&rdquo; could be a neutral word, but I have
+							neither the expertise nor the resources to create such a tool. VADER works well enough for 99
+							percent of characters in the series, but unfortunately for Ghost,
+							<a href="https://youtu.be/8JFwkRcpukk?t=173">we&rsquo;ll have to leave our dear direwolf behind</a>
+							for this project.
+						</p>
+					</aside>
 				</div>
 			</div>
-			<div id="test">
-				<div data-loading-indicator>Loading visualization&hellip;</div>
+			<div class="c-section">
+				<div class="o-container o-container--wide">
+					<div id="test">
+						<div data-loading-indicator>Loading visualization&hellip;</div>
+					</div>
+				</div>
 			</div>
 		</article>
 	</main>

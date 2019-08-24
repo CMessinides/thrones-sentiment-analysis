@@ -1,5 +1,12 @@
 a {
 	@apply text-purple-700;
-	text-decoration: underline;
-	text-decoration-skip-ink: auto;
+	@apply border-b-2;
+	@apply border-purple-300;
+	transition: 90ms border-color linear;
+}
+
+a:active,
+a:focus,
+a:hover {
+	@apply border-purple-700;
 }

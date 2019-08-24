@@ -2,5 +2,8 @@
 
 @import "./components.css";
 @import "./link.css";
+@import "./container.css";
+@import "./rich-text.css";
+@import "./section.css";
 
 @import "./utilities.css";
