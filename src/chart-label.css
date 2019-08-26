@@ -1,0 +1,16 @@
+.c-chart-label {
+	font-size: 0.8em;
+	font-style: italic;
+	font-weight: 700;
+}
+
+.c-chart-label circle,
+.c-chart-label text {
+	fill: currentColor;
+	stroke-width: 0;
+}
+
+.c-chart-label line {
+	stroke: currentColor;
+	stroke-dasharray: 4,2;
+}

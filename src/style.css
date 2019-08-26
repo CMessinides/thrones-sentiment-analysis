@@ -1,8 +1,14 @@
 @import "./base.css";
 
 @import "./components.css";
-@import "./link.css";
+@import "./viz.css";
+@import "./chart.css";
+@import "./chart-label.css";
+@import "./chart-line.css";
+@import "./axis.css";
+@import "./tick.css";
 @import "./container.css";
+@import "./link.css";
 @import "./rich-text.css";
 @import "./section.css";
 

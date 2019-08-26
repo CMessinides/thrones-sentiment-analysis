@@ -1,0 +1,67 @@
+.c-viz__title {
+	@apply text-2xl;
+	@apply font-bold;
+	@apply font-heading;
+	@apply text-black;
+}
+
+.c-viz__kicker {
+	@apply block;
+	@apply text-sm;
+	@apply font-normal;
+	@apply font-body;
+	@apply uppercase;
+	@apply tracking-wider;
+	@apply text-orange-700;
+}
+
+.c-viz__scroll-container {
+	@apply -mx-5;
+	@apply relative;
+}
+
+.c-viz__scroll-container::before,
+.c-viz__scroll-container::after {
+	@apply absolute;
+	@apply top-0;
+	@apply bottom-0;
+	@apply w-5;
+	content: '';
+}
+
+.c-viz__scroll-container::before {
+	@apply left-0;
+	background: linear-gradient(to left, transparent, 20%, theme('colors.orange.100'))
+}
+
+.c-viz__scroll-container::after {
+	@apply right-0;
+	background: linear-gradient(to right, transparent, 20%, theme('colors.orange.100'))
+}
+
+.c-viz__chart-container {
+	@apply mt-5;
+	@apply pl-5;
+	@apply flex;
+	overflow-x: auto;
+}
+
+.c-viz__chart-container::before {
+	@apply absolute;
+	@apply top-0;
+	@apply bottom-0;
+	@apply right-0;
+	@apply w-5;
+	content: '';
+	background: linear-gradient(to right, transparent, theme('colors.orange.100'))
+}
+
+/* This is hacky, but it provides a spacer so that the
+	 the chart is not flush with the screen when it overflows
+	 and creates a scroll container. */
+.c-viz__chart-container::after {
+	@apply block;
+	@apply w-5;
+	@apply flex-none;
+	content: '';
+}

@@ -6,3 +6,7 @@
 .o-container--wide {
 	@apply max-w-6xl;
 }
+
+.o-container--extra-wide {
+	max-width: 96rem;
+}

@@ -1,0 +1,18 @@
+.c-tick text {
+	font-size: 0.8em;
+	stroke-width: 0;
+}
+
+.c-tick line {
+	stroke-dasharray: 1,2;
+	stroke-opacity: 0.75;
+}
+
+.c-tick--x:not(.c-tick--landmark) line {
+	stroke-opacity: 0.2;
+}
+
+.c-tick--y.c-tick--0 line {
+	stroke-dasharray: none;
+	stroke-opacity: 0.5;
+}

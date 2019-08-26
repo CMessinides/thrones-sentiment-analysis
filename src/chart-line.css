@@ -1,0 +1,11 @@
+.c-chart-line {
+	fill: none;
+	stroke: theme('colors.purple.600');
+	stroke-width: 2px;
+	stroke-linejoin: round;
+}
+
+.c-chart-line--subtle {
+	stroke: currentColor;
+	stroke-opacity: 0.5;
+}
