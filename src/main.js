@@ -1,4 +1,7 @@
 import scoresUrl from "../data/mean-scores.json";
+import episodeMetadataUrl from "./static/episode-meta.json";
+import characterMetadataUrl from "./static/character-meta.json";
+
 import React from "react";
 import ReactDOM from "react-dom";
 import OverallScoresChart from "./OverallScoresChart";
@@ -7,8 +10,14 @@ const manifest = {
 	"overall-scores-chart": OverallScoresChart
 };
 
-fetchJson(scoresUrl)
-	.then(data => mountCharts(manifest, { data }))
+Promise.all([
+	fetchJson(scoresUrl),
+	fetchJson(episodeMetadataUrl),
+	fetchJson(characterMetadataUrl)
+])
+	.then(([data, episodes, characters]) =>
+		mountCharts(manifest, { data, metadata: { episodes, characters } })
+	)
 	.catch(error => mountCharts(manifest, { error }));
 
 class FetchError extends Error {}
@@ -27,12 +36,12 @@ function fetchJson(url) {
 		});
 }
 
-function mountCharts(manifest, { data, error } = {}) {
+function mountCharts(manifest, props = {}) {
 	for (let id in manifest) {
 		const Chart = manifest[id];
 		const root = document.getElementById(id);
 		removeLoadingIndicator(root);
-		ReactDOM.render(<Chart data={data} error={error} />, root);
+		ReactDOM.render(<Chart {...props} />, root);
 	}
 }
 

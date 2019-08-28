@@ -1,0 +1,367 @@
+[
+  {
+    "season": 1,
+    "episode": 1,
+    "title": "Winter Is Coming"
+  },
+  {
+    "season": 1,
+    "episode": 2,
+    "title": "The Kingsroad"
+  },
+  {
+    "season": 1,
+    "episode": 3,
+    "title": "Lord Snow"
+  },
+  {
+    "season": 1,
+    "episode": 4,
+    "title": "Cripples, Bastards, and Broken Things"
+  },
+  {
+    "season": 1,
+    "episode": 5,
+    "title": "The Wolf and the Lion"
+  },
+  {
+    "season": 1,
+    "episode": 6,
+    "title": "A Golden Crown"
+  },
+  {
+    "season": 1,
+    "episode": 7,
+    "title": "You Win or You Die"
+  },
+  {
+    "season": 1,
+    "episode": 8,
+    "title": "The Pointy End"
+  },
+  {
+    "season": 1,
+    "episode": 9,
+    "title": "Baelor"
+  },
+  {
+    "season": 1,
+    "episode": 10,
+    "title": "Fire and Blood"
+  },
+  {
+    "season": 2,
+    "episode": 1,
+    "title": "The North Remembers"
+  },
+  {
+    "season": 2,
+    "episode": 2,
+    "title": "The Night Lands"
+  },
+  {
+    "season": 2,
+    "episode": 3,
+    "title": "What Is Dead May Never Die"
+  },
+  {
+    "season": 2,
+    "episode": 4,
+    "title": "Garden of Bones"
+  },
+  {
+    "season": 2,
+    "episode": 5,
+    "title": "The Ghost of Harrenhal"
+  },
+  {
+    "season": 2,
+    "episode": 6,
+    "title": "The Old Gods and the New"
+  },
+  {
+    "season": 2,
+    "episode": 7,
+    "title": "A Man Without Honor"
+  },
+  {
+    "season": 2,
+    "episode": 8,
+    "title": "The Prince of Winterfell"
+  },
+  {
+    "season": 2,
+    "episode": 9,
+    "title": "Blackwater"
+  },
+  {
+    "season": 2,
+    "episode": 10,
+    "title": "Valar Morghulis"
+  },
+  {
+    "season": 3,
+    "episode": 1,
+    "title": "Valar Dohaeris"
+  },
+  {
+    "season": 3,
+    "episode": 2,
+    "title": "Dark Wings, Dark Words"
+  },
+  {
+    "season": 3,
+    "episode": 3,
+    "title": "Walk of Punishment"
+  },
+  {
+    "season": 3,
+    "episode": 4,
+    "title": "And Now His Watch Is Ended"
+  },
+  {
+    "season": 3,
+    "episode": 5,
+    "title": "Kissed by Fire"
+  },
+  {
+    "season": 3,
+    "episode": 6,
+    "title": "The Climb"
+  },
+  {
+    "season": 3,
+    "episode": 7,
+    "title": "The Bear and the Maiden Fair"
+  },
+  {
+    "season": 3,
+    "episode": 8,
+    "title": "Second Sons"
+  },
+  {
+    "season": 3,
+    "episode": 9,
+    "title": "The Rains of Castamere"
+  },
+  {
+    "season": 3,
+    "episode": 10,
+    "title": "Mhysa"
+  },
+  {
+    "season": 4,
+    "episode": 1,
+    "title": "Two Swords"
+  },
+  {
+    "season": 4,
+    "episode": 2,
+    "title": "The Lion and the Rose"
+  },
+  {
+    "season": 4,
+    "episode": 3,
+    "title": "Breaker of Chains"
+  },
+  {
+    "season": 4,
+    "episode": 4,
+    "title": "Oathkeeper"
+  },
+  {
+    "season": 4,
+    "episode": 5,
+    "title": "First of His Name"
+  },
+  {
+    "season": 4,
+    "episode": 6,
+    "title": "The Laws of Gods and Men"
+  },
+  {
+    "season": 4,
+    "episode": 7,
+    "title": "Mockingbird"
+  },
+  {
+    "season": 4,
+    "episode": 8,
+    "title": "The Mountain and the Viper"
+  },
+  {
+    "season": 4,
+    "episode": 9,
+    "title": "The Watchers on the Wall"
+  },
+  {
+    "season": 4,
+    "episode": 10,
+    "title": "The Children"
+  },
+  {
+    "season": 5,
+    "episode": 1,
+    "title": "The Wars to Come"
+  },
+  {
+    "season": 5,
+    "episode": 2,
+    "title": "The House of Black and White"
+  },
+  {
+    "season": 5,
+    "episode": 3,
+    "title": "High Sparrow"
+  },
+  {
+    "season": 5,
+    "episode": 4,
+    "title": "Sons of the Harpy"
+  },
+  {
+    "season": 5,
+    "episode": 5,
+    "title": "Kill the Boy"
+  },
+  {
+    "season": 5,
+    "episode": 6,
+    "title": "Unbowed, Unbent, Unbroken"
+  },
+  {
+    "season": 5,
+    "episode": 7,
+    "title": "The Gift"
+  },
+  {
+    "season": 5,
+    "episode": 8,
+    "title": "Hardhome"
+  },
+  {
+    "season": 5,
+    "episode": 9,
+    "title": "The Dance of Dragons"
+  },
+  {
+    "season": 5,
+    "episode": 10,
+    "title": "Mother's Mercy"
+  },
+  {
+    "season": 6,
+    "episode": 1,
+    "title": "The Red Woman"
+  },
+  {
+    "season": 6,
+    "episode": 2,
+    "title": "Home"
+  },
+  {
+    "season": 6,
+    "episode": 3,
+    "title": "Oathbreaker"
+  },
+  {
+    "season": 6,
+    "episode": 4,
+    "title": "Book of the Stranger"
+  },
+  {
+    "season": 6,
+    "episode": 5,
+    "title": "The Door"
+  },
+  {
+    "season": 6,
+    "episode": 6,
+    "title": "Blood of My Blood"
+  },
+  {
+    "season": 6,
+    "episode": 7,
+    "title": "The Broken Man"
+  },
+  {
+    "season": 6,
+    "episode": 8,
+    "title": "No One"
+  },
+  {
+    "season": 6,
+    "episode": 9,
+    "title": "Battle of the Bastards"
+  },
+  {
+    "season": 6,
+    "episode": 10,
+    "title": "The Winds of Winter"
+  },
+  {
+    "season": 7,
+    "episode": 1,
+    "title": "Dragonstone"
+  },
+  {
+    "season": 7,
+    "episode": 2,
+    "title": "Stormborn"
+  },
+  {
+    "season": 7,
+    "episode": 3,
+    "title": "The Queen's Justice"
+  },
+  {
+    "season": 7,
+    "episode": 4,
+    "title": "The Spoils of War"
+  },
+  {
+    "season": 7,
+    "episode": 5,
+    "title": "Eastwatch"
+  },
+  {
+    "season": 7,
+    "episode": 6,
+    "title": "Beyond the Wall"
+  },
+  {
+    "season": 7,
+    "episode": 7,
+    "title": "The Dragon and the Wolf"
+  },
+  {
+    "season": 8,
+    "episode": 1,
+    "title": "Winterfell"
+  },
+  {
+    "season": 8,
+    "episode": 2,
+    "title": "A Knight of the Seven Kingdoms"
+  },
+  {
+    "season": 8,
+    "episode": 3,
+    "title": "The Long Night"
+  },
+  {
+    "season": 8,
+    "episode": 4,
+    "title": "The Last of the Starks"
+  },
+  {
+    "season": 8,
+    "episode": 5,
+    "title": "The Bells"
+  },
+  {
+    "season": 8,
+    "episode": 6,
+    "title": "The Iron Throne"
+  }
+]
