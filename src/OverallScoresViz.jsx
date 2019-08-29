@@ -2,10 +2,11 @@ import React from "react";
 import ErrorMessage from "./ErrorMessage";
 import Chart from "./Chart";
 import OverallLine from "./OverallLine";
+import OverallTooltip from "./OverallTooltip";
 import useChartContext from "./useChartContext";
 import ChartLabel from "./ChartLabel";
 
-export default function OverallScoresChart({
+export default function OverallScoresViz({
 	data,
 	metadata,
 	error = null
@@ -19,42 +20,6 @@ export default function OverallScoresChart({
 	const s5e10 = data.overall[49];
 	const s8e3 = data.overall[69];
 
-	const Tooltip = ({ datum }) => {
-		const { x, y, upper, lower, n, season, episode } = datum;
-		const { title } = metadata.episodes[x - 1];
-
-		return (
-			<article className="c-tooltip">
-				<dl className="c-tooltip__container">
-					<div className="c-tooltip__ep-kicker">
-						<dt>Season</dt>
-						<dd>{season}</dd>
-						<dt>Episode</dt>
-						<dd>{episode}</dd>
-					</div>
-					<dt className="sr-only">Title</dt>
-					<dd className="c-tooltip__ep-title">{title}</dd>
-					<div className="c-tooltip__footer">
-						<div className="c-tooltip__footer-row">
-							<dt>Comments</dt>
-							<dd>{n}</dd>
-						</div>
-						<div className="c-tooltip__footer-row">
-							<dt>Mean score</dt>
-							<dd>{y.toFixed(3)}</dd>
-						</div>
-						<div className="c-tooltip__footer-row">
-							<dt>95% C.I.</dt>
-							<dd>
-								({lower.toFixed(3)}, {upper.toFixed(3)})
-							</dd>
-						</div>
-					</div>
-				</dl>
-			</article>
-		);
-	};
-
 	return (
 		<div className="c-viz">
 			<h2 className="c-viz__title">
@@ -66,7 +31,7 @@ export default function OverallScoresChart({
 					<Chart
 						{...chart}
 						tooltipData={data.overall}
-						tooltipComponent={Tooltip}
+						tooltipElement={<OverallTooltip metadata={metadata} />}
 					>
 						<OverallLine {...chart} data={data} />
 						<g className="c-chart-labels text-purple-600">

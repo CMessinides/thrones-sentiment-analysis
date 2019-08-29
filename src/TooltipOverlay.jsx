@@ -17,7 +17,7 @@ function TooltipWrapper({
 
 	return (
 		<>
-			<g fill="currentColor" stroke="none" className="text-purple-700">
+			<g fill="currentColor" stroke="none" className="text-purple-600">
 				<circle cx={x} cy={y} r="4"></circle>
 			</g>
 			<g transform={`translate(${x + xTransform},${y + yTransform})`}>
@@ -44,9 +44,11 @@ export default function TooltipOverlay({
 	dataSeries = [],
 	onShowTooltip,
 	onHideTooltip,
-	tooltipComponent: Tooltip = () => null
+	tooltip
 }) {
 	const [tooltipDatum, setTooltipDatum] = React.useState(null);
+
+	console.log({ tooltip });
 
 	const callbacks = {
 		show: onShowTooltip,
@@ -90,7 +92,7 @@ export default function TooltipOverlay({
 						onMouseOver={onHoverHandlerFactory(d)}
 					></rect>
 				))}
-				{tooltipDatum && (
+				{tooltipDatum && React.isValidElement(tooltip) && (
 					<TooltipWrapper
 						x={xScale(tooltipDatum.x)}
 						y={yScale(tooltipDatum.y)}
@@ -98,7 +100,7 @@ export default function TooltipOverlay({
 						chartHeight={height}
 						chartWidth={width}
 					>
-						<Tooltip datum={tooltipDatum} />
+						{React.cloneElement(tooltip, { datum: tooltipDatum })}
 					</TooltipWrapper>
 				)}
 			</g>

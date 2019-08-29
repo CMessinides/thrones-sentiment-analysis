@@ -13,7 +13,7 @@ export default function Chart({
 	xTicks,
 	yScale,
 	yTicks,
-	tooltipComponent,
+	tooltipElement,
 	tooltipData,
 	children
 }) {
@@ -29,7 +29,7 @@ export default function Chart({
 					/>
 					<g opacity={isTooltipVisible ? 0.5 : undefined}>{children}</g>
 					<TooltipOverlay
-						tooltipComponent={tooltipComponent}
+						tooltip={tooltipElement}
 						dataSeries={tooltipData}
 						xScale={xScale}
 						yScale={yScale}

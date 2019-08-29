@@ -4,10 +4,54 @@ import characterMetadataUrl from "./static/character-meta.json";
 
 import React from "react";
 import ReactDOM from "react-dom";
-import OverallScoresChart from "./OverallScoresChart";
+import OverallScoresViz from "./OverallScoresViz";
+import CharacterViz from "./CharacterViz.jsx";
+import ChartLabel from "./ChartLabel";
 
 const manifest = {
-	"overall-scores-chart": OverallScoresChart
+	"overall-scores-viz": OverallScoresViz,
+	"jon-snow-viz": props => (
+		<CharacterViz {...props} name="Jon Snow" domain={{ y: [-0.3, 0.3] }} />
+	),
+	"stannis-viz": props => (
+		<CharacterViz
+			{...props}
+			name="Stannis Baratheon"
+			domain={{ y: [-0.4, 0.4] }}
+			labels={({ points, labelProps }) => (
+				<ChartLabel
+					point={points.find(
+						({ season, episode }) => season === 5 && episode === 9
+					)}
+					direction="up"
+					length={152}
+					{...labelProps}
+				>
+					<tspan>Stannis burns</tspan>
+					<tspan>Shireen at the stake</tspan>
+				</ChartLabel>
+			)}
+		/>
+	),
+	"hodor-viz": props => (
+		<CharacterViz
+			{...props}
+			name="Hodor"
+			domain={{ y: [-0.4, 0.4] }}
+			labels={({ points, labelProps }) => (
+				<ChartLabel
+					point={points.find(
+						({ season, episode }) => season === 6 && episode === 5
+					)}
+					length={128}
+					{...labelProps}
+				>
+					<tspan>Hodor holds</tspan>
+					<tspan>the door</tspan>
+				</ChartLabel>
+			)}
+		/>
+	)
 };
 
 Promise.all([

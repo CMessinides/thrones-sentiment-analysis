@@ -43,6 +43,7 @@
 	@apply text-gray-600;
 	font-size: 1.4em;
 	padding-top: 4px;
+	font-feature-settings: "tnum";
 }
 
 .c-tooltip__footer-row {
