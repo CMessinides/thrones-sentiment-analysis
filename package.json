@@ -16,7 +16,7 @@
     "scripts:transform": "pipenv run python scripts/transform.py",
     "scripts:all": "yarn scripts:scrape && yarn scripts:analyze && yarn scripts:transform",
     "dev": "parcel serve index.html",
-    "build": "NODE_ENV=development parcel build index.html"
+    "build": "parcel build index.html"
   },
   "browserslist": "> 0.25%, not dead",
   "devDependencies": {

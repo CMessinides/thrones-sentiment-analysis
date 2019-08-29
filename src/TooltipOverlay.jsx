@@ -99,13 +99,7 @@ export default function TooltipOverlay({
 						chartHeight={height}
 						chartWidth={width}
 					>
-						{React.cloneElement(
-							(() => {
-								console.log("tooltip", { tooltip });
-								return tooltip;
-							})(),
-							{ datum: tooltipDatum }
-						)}
+						{React.cloneElement(tooltip, { datum: tooltipDatum })}
 					</TooltipWrapper>
 				)}
 			</g>
