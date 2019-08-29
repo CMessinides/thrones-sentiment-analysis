@@ -1,5 +1,5 @@
 import React from "react";
-import Chart from "./chart";
+import Chart from "./Chart";
 import useChartContext from "./useChartContext";
 import OverallLine from "./OverallLine";
 import CharacterScatterPlot from "./CharacterScatterPlot";
