@@ -1,8 +1,8 @@
 a,
 .c-link {
-	@apply text-purple-700;
+	@apply text-emphasis-700;
 	@apply border-b-2;
-	@apply border-purple-300;
+	@apply border-emphasis-700-a33;
 	transition: 90ms border-color linear;
 }
 
@@ -12,5 +12,5 @@ a:hover,
 .c-link:active,
 .c-link:focus,
 .c-link:hover {
-	@apply border-purple-700;
+	@apply border-emphasis-700;
 }

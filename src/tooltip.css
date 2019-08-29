@@ -31,7 +31,7 @@
 
 .c-tooltip__ep-title {
 	@apply font-bold;
-	@apply text-black;
+	@apply text-grey-900;
 	@apply leading-snug;
 	@apply font-heading;
 	font-size: 1.4em;
@@ -40,7 +40,7 @@
 
 .c-tooltip__footer {
 	@apply mt-auto;
-	@apply text-gray-600;
+	@apply text-grey-600;
 	font-size: 1.4em;
 	padding-top: 4px;
 	font-feature-settings: "tnum";
@@ -50,11 +50,11 @@
 	@apply flex;
 	@apply items-baseline;
 	@apply border-t;
-	@apply border-gray-300;
+	@apply border-grey-300;
 }
 
 .c-tooltip__footer-row:first-of-type {
-	@apply border-gray-400;
+	@apply border-grey-400;
 }
 
 .c-tooltip__footer-row--indented {

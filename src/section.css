@@ -4,7 +4,7 @@
 
 .c-section--text {
 	@apply bg-white;
-	@apply text-gray-900;
+	@apply text-grey-900;
 }
 
 @screen md {

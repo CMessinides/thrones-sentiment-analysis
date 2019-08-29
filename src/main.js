@@ -4,14 +4,23 @@ import characterMetadataUrl from "./static/character-meta.json";
 
 import React from "react";
 import ReactDOM from "react-dom";
+import ErrorMessage from "./ErrorMessage";
 import OverallScoresViz from "./OverallScoresViz";
 import CharacterViz from "./CharacterViz.jsx";
 import ChartLabel from "./ChartLabel";
+import CharacterSearchClient from "./CharacterSearchClient";
+import SearchableCharacterViz from "./SearchableCharacterViz.jsx";
 
 const manifest = {
 	"overall-scores-viz": OverallScoresViz,
 	"jon-snow-viz": props => (
 		<CharacterViz {...props} name="Jon Snow" domain={{ y: [-0.3, 0.3] }} />
+	),
+	"searchable-character-viz": props => (
+		<SearchableCharacterViz
+			searchClient={new CharacterSearchClient(props.data)}
+			{...props}
+		/>
 	),
 	"stannis-viz": props => (
 		<CharacterViz
@@ -59,10 +68,11 @@ Promise.all([
 	fetchJson(episodeMetadataUrl),
 	fetchJson(characterMetadataUrl)
 ])
+	// Promise.reject()
 	.then(([data, episodes, characters]) =>
 		mountCharts(manifest, { data, metadata: { episodes, characters } })
 	)
-	.catch(error => mountCharts(manifest, { error }));
+	.catch(error => mountErrors(manifest, { error }));
 
 class FetchError extends Error {}
 function fetchJson(url) {
@@ -86,6 +96,16 @@ function mountCharts(manifest, props = {}) {
 		const root = document.getElementById(id);
 		removeLoadingIndicator(root);
 		ReactDOM.render(<Chart {...props} />, root);
+	}
+}
+
+function mountErrors(manifest, { error }) {
+	for (const id in manifest) {
+		if (manifest.hasOwnProperty(id)) {
+			const root = document.getElementById(id);
+			removeLoadingIndicator(root);
+			ReactDOM.render(<ErrorMessage error={error} />, root);
+		}
 	}
 }
 

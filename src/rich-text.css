@@ -20,7 +20,7 @@
 	@apply border-t-4;
 	@apply border-b;
 	@apply border-double;
-	@apply border-orange-600;
+	@apply border-subtle-600;
 	border-bottom-style: solid;
 	padding-top: 0.75em;
 	padding-bottom: 0.75em;

@@ -1,4 +1,5 @@
 import React from "react";
+import theme from "./theme";
 
 function TooltipWrapper({
 	x,
@@ -17,7 +18,7 @@ function TooltipWrapper({
 
 	return (
 		<>
-			<g fill="currentColor" stroke="none" className="text-purple-600">
+			<g fill={theme.colors.emphasis["700"]} stroke="none">
 				<circle cx={x} cy={y} r="4"></circle>
 			</g>
 			<g transform={`translate(${x + xTransform},${y + yTransform})`}>
@@ -25,7 +26,7 @@ function TooltipWrapper({
 					width={width}
 					height={height}
 					fill="white"
-					strokeOpacity="0.5"
+					stroke={theme.colors.subtle["500"]}
 				></rect>
 				<foreignObject width={width} height={height}>
 					{children}
@@ -47,8 +48,6 @@ export default function TooltipOverlay({
 	tooltip
 }) {
 	const [tooltipDatum, setTooltipDatum] = React.useState(null);
-
-	console.log({ tooltip });
 
 	const callbacks = {
 		show: onShowTooltip,

@@ -1,14 +1,23 @@
-.c-viz__header {
+.c-viz__title-container {
 	@apply flex;
 	@apply items-start;
 }
 
-.c-viz__character-image {
-	@apply block;
-	@apply rounded-full;
+.c-viz__character-image-container {
+	@apply bg-subtle-200;
 	@apply mr-3;
+	@apply rounded-full;
+	@apply flex-shrink-0;
 	width: 48px;
 	height: 48px;
+}
+
+.c-viz__character-image {
+	@apply block;
+	@apply w-full;
+	@apply h-full;
+	@apply rounded-full;
+	@apply shadow-md;
 	object-fit: cover;
 }
 
@@ -16,8 +25,8 @@
 	@apply text-2xl;
 	@apply font-bold;
 	@apply font-heading;
-	@apply text-black;
-	@apply leading-none;
+	@apply text-grey-900;
+	@apply leading-tight;
 }
 
 .c-viz__kicker {
@@ -27,8 +36,29 @@
 	@apply font-body;
 	@apply uppercase;
 	@apply tracking-wider;
-	@apply text-orange-700;
-	@apply mb-2;
+	@apply mb-1;
+	@apply text-subtle-700;
+}
+
+.c-viz__header-search {
+	@apply mt-4;
+	@apply max-w-xs;
+}
+
+@screen md {
+	.c-viz__header {
+		@apply flex;
+		@apply items-start;
+	}
+
+	.c-viz__title-container {
+		@apply mr-auto;
+	}
+
+	.c-viz__header-search {
+		@apply mt-0;
+		@apply ml-4;
+	}
 }
 
 .c-viz__scroll-container {

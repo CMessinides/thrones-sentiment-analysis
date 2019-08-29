@@ -1,4 +1,5 @@
 import React from "react";
+import theme from "./theme";
 
 export default function CharacterScatterPlot({ xScale, yScale, scores }) {
 	return scores.map(score => {
@@ -6,7 +7,11 @@ export default function CharacterScatterPlot({ xScale, yScale, scores }) {
 		const y = yScale(score.y);
 
 		return (
-			<g className="fill-current stroke-current text-purple-700" key={score.x}>
+			<g
+				fill={theme.colors.emphasis["700"]}
+				stroke={theme.colors.emphasis["700"]}
+				key={score.x}
+			>
 				<circle
 					cx={x}
 					cy={y}

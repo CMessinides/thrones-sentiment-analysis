@@ -22,8 +22,8 @@ function ErrorIcon({ children, ...props }) {
 
 export default function ErrorMessage() {
 	return (
-		<div className="p-5 text-orange-100 bg-orange-600 o-container sm:flex items-start">
-			<div className="rounded-full inline-block border-8 border-orange-400 sm:mr-5">
+		<div className="p-5 text-subtle-100 bg-subtle-600 o-container sm:flex items-start">
+			<div className="rounded-full inline-block border-8 border-subtle-400 sm:mr-5">
 				<ErrorIcon className="block" width="24" height="24" />
 			</div>
 			<p className="flex-grow">

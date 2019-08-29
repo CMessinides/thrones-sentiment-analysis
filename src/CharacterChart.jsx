@@ -25,7 +25,7 @@ export default function CharacterChart({
 			<OverallLine {...chart} data={data} variant="subtle" />
 			<CharacterScatterPlot {...chart} scores={scores} />
 			{typeof labels === "function" && (
-				<g className="c-chart-labels text-purple-600">
+				<g className="c-chart-labels text-emphasis-700">
 					{labels({ points: scores, labelProps: chart })}
 				</g>
 			)}

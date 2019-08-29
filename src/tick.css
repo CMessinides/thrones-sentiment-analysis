@@ -9,7 +9,7 @@
 }
 
 .c-tick--x:not(.c-tick--landmark) line {
-	stroke-opacity: 0.2;
+	stroke-opacity: 0.33;
 }
 
 .c-tick--y.c-tick--0 line {

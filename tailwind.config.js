@@ -1,3 +1,5 @@
+const { colors } = require("./src/theme.js");
+
 const serifFallback = [
 	"Georgia",
 	"Cambria",
@@ -8,6 +10,7 @@ const serifFallback = [
 
 module.exports = {
 	theme: {
+		colors,
 		fontFamily: {
 			body: ["Alegreya", ...serifFallback],
 			heading: ["Eczar", ...serifFallback]
