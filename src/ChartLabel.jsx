@@ -8,7 +8,13 @@ function normalizeLines(children) {
 
 function renderTspans(lines, x) {
 	return lines.map((line, i) =>
-		React.cloneElement(line, { key: i, x, dy: i && `1em` })
+		React.cloneElement(
+			(() => {
+				console.log("line", { line });
+				return line;
+			})(),
+			{ key: i, x, dy: i && `1em` }
+		)
 	);
 }
 
