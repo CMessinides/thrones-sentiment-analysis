@@ -1,3 +1,5 @@
+<!-- A comment in the README for a temporary commit -->
+
 # Cripples, Bastards, and Sentiment Analysis
 
 <div style="background-color:#ffd97d;color:#6d4511;padding:0.5em 2em;border:1px currentColor solid;border-radius:8px">
