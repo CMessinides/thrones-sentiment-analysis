@@ -107,10 +107,6 @@
 		"caseInsensitive": ["Jaqen", "H'ghar"],
 		"caseSensitive": []
 	},
-	"Jeor Mormont": {
-		"caseInsensitive": ["Jeor"],
-		"caseSensitive": []
-	},
 	"Joffrey Baratheon": {
 		"caseInsensitive": ["Joffrey", "Joff"],
 		"caseSensitive": []
@@ -153,10 +149,6 @@
 	},
 	"Maester Aemon": {
 		"caseInsensitive": ["Aemon"],
-		"caseSensitive": []
-	},
-	"Maester Luwin": {
-		"caseInsensitive": ["Luwin"],
 		"caseSensitive": []
 	},
 	"Mance Rayder": {
