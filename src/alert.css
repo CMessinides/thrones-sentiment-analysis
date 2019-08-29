@@ -1,0 +1,58 @@
+.c-alert {
+	@apply bg-subtle-200;
+	@apply items-start;
+	@apply p-5;
+}
+
+.c-alert--bold {
+	@apply bg-subtle-600;
+	@apply text-subtle-100;
+}
+
+.c-alert--bold .c-alert__heading {
+	@apply text-white;
+}
+
+.c-alert__icon {
+	@apply flex-shrink-0;
+	@apply inline-block;
+	@apply mb-3;
+	@apply rounded-full;
+	height: 40px;
+	width: 40px;
+}
+
+.c-alert__icon--halo {
+	@apply border-8;
+	@apply border-subtle-300;
+}
+
+.c-alert--bold .c-alert__icon--halo {
+	border-color: rgba(255, 255, 255, 0.33);
+}
+
+.c-alert__text {
+	@apply flex-grow;
+}
+
+.c-alert__heading {
+	@apply block;
+	@apply leading-tight;
+	@apply mb-1;
+	@apply text-lg;
+}
+
+.c-alert__body {
+	@apply italic;
+}
+
+@screen sm {
+	.c-alert {
+		@apply flex;
+	}
+
+	.c-alert__icon {
+		@apply mb-0;
+		@apply mr-5;
+	}
+}

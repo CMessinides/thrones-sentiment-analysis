@@ -4,26 +4,6 @@ import classNames from "classnames";
 import CharacterVizHeader from "./CharacterVizHeader";
 import CharacterChart from "./CharacterChart";
 
-function SearchIcon({ children, ...props }) {
-	return (
-		<div className="c-search__image-container">
-			<svg
-				className="c-search__icon"
-				viewBox="0 0 20 20"
-				xmlns="http://www.w3.org/2000/svg"
-				{...props}
-				aria-hidden="true"
-			>
-				<path
-					d="M11.192 12.606a7 7 0 1 1 1.414-1.414l1.41 1.41a1.991 1.991 0 0 1 1.932.518l2.832 2.831c.78.78.785 2.04-.002 2.827a1.994 1.994 0 0 1-2.827.002l-2.831-2.832a1.994 1.994 0 0 1-.518-1.932l-1.41-1.41zM7 12A5 5 0 1 0 7 2a5 5 0 0 0 0 10z"
-					fill="currentColor"
-					fillRule="evenodd"
-				/>
-			</svg>
-		</div>
-	);
-}
-
 function getDomainFromScores(scores = []) {
 	const yCoordinates = scores
 		.reduce((coordinates, score) => {
@@ -105,7 +85,11 @@ export default function SearchableCharacterViz({
 								<label {...getLabelProps({ className: "sr-only" })}>
 									Character name
 								</label>
-								<SearchIcon />
+								<div className="c-search__image-container">
+									<svg className="c-icon c-search__icon">
+										<use href="#icon-search"></use>
+									</svg>
+								</div>
 								<input
 									{...getInputProps({
 										className: classNames("c-search__input", {

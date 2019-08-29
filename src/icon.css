@@ -1,0 +1,8 @@
+.c-icon {
+	@apply fill-current;
+}
+
+.c-icon--fill {
+	@apply h-full;
+	@apply w-full;
+}

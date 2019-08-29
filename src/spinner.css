@@ -1,0 +1,34 @@
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.c-spinner {
+	@apply relative;
+}
+
+.c-spinner::before,
+.c-spinner::after {
+	@apply absolute;
+	@apply border-4;
+	@apply bottom-0;
+	@apply left-0;
+	@apply right-0;
+	@apply rounded-full;
+	@apply top-0;
+	content: '';
+}
+
+.c-spinner::before {
+	@apply opacity-25;
+}
+
+.c-spinner::after {
+	border-color: transparent transparent transparent currentColor;
+	animation: spin 500ms linear infinite;
+}

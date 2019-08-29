@@ -1,0 +1,24 @@
+mixin visualization(id)
+	.c-section
+			.o-container.o-container--extra-wide
+				div(id=id)
+					.c-alert.o-container(data-loading-indicator='')
+						.c-alert__icon.c-spinner
+						p.c-alert__text
+							strong.c-alert__heading Sending a raven to the Citadel&hellip;
+							span.c-alert__body This visualization should load shortly.
+					noscript
+						.c-alert.c-alert--bold.o-container
+							.c-alert__icon.c-alert__icon--halo
+								svg.c-icon.c-icon--fill
+									use(href="#icon-error")
+							p.c-alert__text
+								strong.c-alert__heading JavaScript is not enabled.
+								span.c-alert__body
+									| The visualizations in this essay require JavaScript. Please
+									| enable JavaScript for this site to view this visualization.
+
+mixin textContent
+	.c-section.c-section--text
+		.o-container.o-rich-text
+			block

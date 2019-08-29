@@ -15,8 +15,8 @@
     "scripts:analyze": "pipenv run python scripts/analyze.py",
     "scripts:transform": "pipenv run python scripts/transform.py",
     "scripts:all": "yarn scripts:scrape && yarn scripts:analyze && yarn scripts:transform",
-    "dev": "parcel serve index.html",
-    "build": "parcel build index.html"
+    "dev": "parcel serve index.pug",
+    "build": "parcel build index.pug"
   },
   "browserslist": "> 0.25%, not dead",
   "devDependencies": {
@@ -26,7 +26,8 @@
     "autoprefixer": "^9.6.1",
     "core-js": "^3.2.1",
     "parcel-bundler": "^1.12.3",
-    "parcel-plugin-json-url-loader": "^0.1.2"
+    "parcel-plugin-json-url-loader": "^0.1.2",
+    "pug": "^2.0.4"
   },
   "dependencies": {
     "classnames": "^2.2.6",
