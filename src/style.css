@@ -5,7 +5,7 @@
 @import "./chart.css";
 @import "./chart-label.css";
 @import "./chart-line.css";
-@import "./axis.css";
+@import "./chart-point.css";
 @import "./tick.css";
 @import "./tooltip.css";
 @import "./search.css";
@@ -16,6 +16,7 @@
 @import "./section.css";
 @import "./alert.css";
 @import "./spinner.css";
+@import "./legend.css";
 
 @import "./utilities.css";
 

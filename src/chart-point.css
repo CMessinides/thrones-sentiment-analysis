@@ -1,0 +1,17 @@
+.c-chart-point {
+	fill: theme('colors.emphasis.700');
+	stroke: theme('colors.emphasis.700');
+}
+
+.c-chart-point__center,
+.c-chart-point__area {
+	stroke: none;
+}
+
+.c-chart-point__interval {
+	stroke-width: 1.5px;
+}
+
+.c-chart-point__area {
+	fill-opacity: 0.33;
+}

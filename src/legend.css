@@ -1,0 +1,16 @@
+.c-legend__item {
+	margin-top: 1em;
+}
+
+.c-legend__figure {
+	@apply flex;
+	@apply items-start;
+}
+
+.c-legend__icon {
+	@apply border;
+	@apply border-subtle-200;
+	@apply bg-subtle-100;
+	@apply flex-shrink-0;
+	margin-right: 0.75em;
+}

@@ -17,6 +17,13 @@ html.h-full.overflow-y-scroll.no-js(lang='en')
 		include src/icons.svg
 		//- Site header
 		header
+		aside.bg-emphasis-700.text-white
+			.o-container.o-container--wide.p-5(class="sm:flex items-start")
+				svg.c-icon.mb-3.flex-shrink-0.text-emphasis-100.border-4.rounded-full(width="24" height="24" class="sm:mb-0 sm:mr-3" style={ "border-color": "rgba(255,255,255,0.33)"})
+					use(href="#icon-error")
+				p
+					| #[strong You are viewing a draft version of this essay.]
+					| I&rsquo;m hard at work on the final version right now, but in the meantime, excuse the gaps!
 		main
 			//- Essay body
 			article
@@ -29,13 +36,12 @@ html.h-full.overflow-y-scroll.no-js(lang='en')
 							|  Characters that Fans Love to&nbsp;Hate
 						.o-container
 							p.mt-5.text-lg(class='sm:text-xl md:text-2xl')
-								| A sentiment analysis of over 300,000 Reddit comments reveals how fans 
-								em really
+								| A sentiment analysis of over 300,000 Reddit comments reveals how fans #[em really]
 								| feel about characters from HBO&rsquo;s blockbuster series.
 							p.mt-5.text-sm.tracking-wider.uppercase(class='sm:text-base')
 								| A visual essay by 
 								a(href='https://www.cmessinides.com' rel='noopener' target='_blank') Cameron Messinides
-					span.inline-block.mb-5.text-emphasis-700.italic (Spoilers!)
+					small.text-base.inline-block.mb-5.text-emphasis-700.italic (Spoilers!)
 					img.block.mx-auto(src='./src/static/characters.png' alt='' width='420' height='90' style='opacity:0.9')
 				+textContent
 						p
@@ -52,7 +58,9 @@ html.h-full.overflow-y-scroll.no-js(lang='en')
 							| series for the first time, and because I&rsquo;m late to the game, I wondered if the
 							| way I felt about various characters or moments was in line with how fans had reacted
 							| to the show as it unfolded in real time.
+						+__temporaryWIPNotice
 						h2 What is Sentiment Analysis?
+						+__temporaryWIPNotice
 						aside
 							p
 								| Case in point: an earlier draft of this essay included Ghost,
@@ -74,15 +82,74 @@ html.h-full.overflow-y-scroll.no-js(lang='en')
 								a(href='https://youtu.be/8JFwkRcpukk?t=173') we&rsquo;ll have to leave our dear direwolf behind
 								|
 								| for this project.
+						h2 A Look at the Big Picture
+						+__temporaryWIPNotice
+						aside
+							p
+								| Hover/tap anywhere on the chart to see more detailed information about an episode.
 				+visualization('overall-scores-viz')
 				+textContent
+					+__temporaryWIPNotice
+					h2 The Breakdown by Character
+					+__temporaryWIPNotice
+					aside
+						p In the following charts:
+						ul.c-legend
+							li.c-legend__item
+								figure.c-legend__figure
+									svg.c-legend__icon(width="48" height="48" aria-labelled-by="legend-overall-line-title")
+										title#legend-overall-line-title Transparent purple line
+										path.c-chart-line.c-chart-line--subtle(d="M0,10L2,12L13,27L24,23L35,33L46,23L48,22" aria-hidden="true")
+									figcaption.c-legend__caption
+										| The #[strong line] shows the change in overall average sentiment by episode, just like the previous chart.
+										| It&rsquo;s a good measure of #[strong how fans reacted to a particular episode].
+							li.c-legend__item
+								figure.c-legend__figure
+									svg.c-legend__icon(width="48" height="48" aria-labelled-by="legend-point-title")
+										title#legend-point-title Purple points with error bars
+										g.c-chart-point(aria-hidden="true" transform="translate(24,24)")
+											line.c-chart-point__interval(x1="0" x2="0" y1="-24" y2="24")
+											circle.c-chart-point__center(r="3")
+										g.c-chart-point(aria-hidden="true" transform="translate(13,17)")
+											line.c-chart-point__interval(x1="0" x2="0" y1="-8" y2="8")
+											circle.c-chart-point__center(r="3")
+										g.c-chart-point(aria-hidden="true" transform="translate(35,42)")
+											line.c-chart-point__interval(x1="0" x2="0" y1="-27" y2="27")
+											circle.c-chart-point__center(r="3")
+									figcaption.c-legend__caption
+										| Each #[strong point] represents the estimated average sentiment score of sentences mentioning the character
+										| in the comments about a given episode. The bars extending above and below each point represent a 95%
+										|
+										| #[a(href="https://www.graphpad.com/guides/prism/7/statistics/stat_more_about_confidence_interval.htm?toc=0") confidence interval]
+										|
+										| for that estimate. It&rsquo;s a good measure of #[strong how fans reacted to the character in a particular episode].
+							li.c-legend__item
+								figure.c-legend__figure
+									svg.c-legend__icon(width="48" height="48" aria-labelled-by="legend-area-title")
+										title#legend-area-title Transparent purple circles
+										g.c-chart-point(aria-hidden="true" transform="translate(13,17)")
+											circle.c-chart-point__area(r=0.16*75)
+										g.c-chart-point(aria-hidden="true" transform="translate(35,42)")
+											circle.c-chart-point__area(r=0.21*75)
+									figcaption.c-legend__caption
+										| Each point also has a surrounding #[strong area]. The size of the area is proportionate to
+										| how frequently the character was mentioned in the comments about a given episode.
+										| It&rsquo;s a good measure of #[strong how much the character dominated the conversation about a particular episode].
+									
 				+visualization('jon-snow-viz')
 				+textContent
+					+__temporaryWIPNotice
 				+visualization('searchable-character-viz')
 				+textContent
-				+visualization('stannis-viz')
-				+textContent
+					+__temporaryWIPNotice
+					h2 Who Did Fans Mourn the Most?
+					+__temporaryWIPNotice
 				+visualization('hodor-viz')
+				+textContent
+					+__temporaryWIPNotice
+					h2 Who Did Fans Hate the Most?
+					+__temporaryWIPNotice
+				+visualization('stannis-viz')
 		//- Site footer
 		footer
 		script(async='' src='./src/main.js')

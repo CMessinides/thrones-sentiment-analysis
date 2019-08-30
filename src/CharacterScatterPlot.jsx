@@ -1,5 +1,4 @@
 import React from "react";
-import theme from "./theme";
 
 export default function CharacterScatterPlot({ xScale, yScale, scores }) {
 	return scores.map(score => {
@@ -7,26 +6,21 @@ export default function CharacterScatterPlot({ xScale, yScale, scores }) {
 		const y = yScale(score.y);
 
 		return (
-			<g
-				fill={theme.colors.emphasis["700"]}
-				stroke={theme.colors.emphasis["700"]}
-				key={score.x}
-			>
+			<g className="c-chart-point" key={score.x}>
 				<circle
+					className="c-chart-point__area"
 					cx={x}
 					cy={y}
 					r={75 * score.proportion}
-					fillOpacity="0.33"
-					stroke="none"
 				></circle>
 				<line
+					className="c-chart-point__interval"
 					x1={x}
 					x2={x}
 					y1={yScale(score.upper)}
 					y2={yScale(score.lower)}
-					strokeWidth="1.5"
 				></line>
-				<circle cx={x} cy={y} r="3" stroke="none"></circle>
+				<circle className="c-chart-point__center" cx={x} cy={y} r="3"></circle>
 			</g>
 		);
 	});

@@ -13,7 +13,7 @@ export default function ScoresAxis({ ticks, scale, padding, width }) {
 					<line x2="100%"></line>
 					<text y="-4">
 						{y}
-						{i === ticks.length - 1 && " sentiment score (n ≥ 30)"}
+						{i === ticks.length - 1 && " avg. sentiment score (n ≥ 30)"}
 					</text>
 				</g>
 			))}

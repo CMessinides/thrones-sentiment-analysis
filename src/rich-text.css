@@ -8,11 +8,11 @@
 	}
 }
 
-.o-rich-text * + * {
-	margin-top: 0.75em;
+.o-rich-text > * + * {
+	margin-top: 1em;
 }
 
-.o-rich-text * + h2 {
+.o-rich-text > * + h2 {
 	margin-top: 1.5em;
 }
 
@@ -27,7 +27,7 @@
 	font-size: 0.875em;
 }
 
-.o-rich-text aside * + * {
+.o-rich-text aside > * + * {
 	margin-top: 0.5em;
 }
 
