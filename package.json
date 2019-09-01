@@ -25,6 +25,7 @@
     "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^9.6.1",
     "core-js": "^3.2.1",
+    "jstransformer-markdown-it": "^2.1.0",
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-json-url-loader": "^0.1.2",
     "parcel-plugin-purgecss": "^2.1.2",

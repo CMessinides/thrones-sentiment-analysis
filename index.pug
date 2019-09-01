@@ -44,49 +44,15 @@ html.h-full.overflow-y-scroll.no-js(lang='en')
 					small.text-base.inline-block.mb-5.text-emphasis-700.italic (Spoilers!)
 					img.block.mx-auto(src='./src/static/characters.png' alt='' width='420' height='90' style='opacity:0.9')
 				+textContent
-						p
-							| Which
-							|
-							cite Game of Thrones
-							|
-							| character inspired the most hatred among the fans?
-							| Cersei? Ramsay? Surely Joffrey and his sneers must have earned him the title, right?
-							| And how about the reverse: which characters were perennial fan favorites? Tormund?
-							| Arya? Pod the Rod?
-						p
-							| I found myself asking these questions recently. In July, I finished watching through the
-							| series for the first time, and because I&rsquo;m late to the game, I wondered if the
-							| way I felt about various characters or moments was in line with how fans had reacted
-							| to the show as it unfolded in real time.
+						//- Intro
+						include:markdown-it(html typographer) ./content/intro.md
 						+__temporaryWIPNotice
-						h2 What is Sentiment Analysis?
+						//- A sentiment analysis primer
+						include:markdown-it(html typographer) ./content/what-is-sentiment-analysis.md
 						+__temporaryWIPNotice
-						aside
-							p
-								| Case in point: an earlier draft of this essay included Ghost,
-								| Jon&rsquo;s direwolf, as a character &mdash; that was, until I checked the results and found
-								| that on average, sentences that mentioned Ghost were by far the most negative of any character.
-								| That&rsquo;s because the word &ldquo;ghost&rdquo; has
-								|
-								a(href='https://github.com/cjhutto/vaderSentiment/blob/b045da3c5a29ed130777a16dc78588f53da54a05/vaderSentiment/vader_lexicon.txt#L3254')
-									| a moderately negative sentiment rating of -1.3 in VADER
-								| .
-							p
-								| In an ideal world, I would use a sentiment analyzer tuned to the language of
-								|
-								cite Game of Thrones
-								| , where &ldquo;Ghost&rdquo; could be a neutral word, but I have
-								| neither the expertise nor the resources to create such a tool. VADER works well enough for 99
-								| percent of characters in the series, but unfortunately for Ghost,
-								|
-								a(href='https://youtu.be/8JFwkRcpukk?t=173') we&rsquo;ll have to leave our dear direwolf behind
-								|
-								| for this project.
-						h2 A Look at the Big Picture
+						//- Analysis of all comments
+						include:markdown-it(html typographer) ./content/the-big-picture.md
 						+__temporaryWIPNotice
-						aside
-							p
-								| Hover/tap anywhere on the chart to see more detailed information about an episode.
 				+visualization('overall-scores-viz')
 				+textContent
 					+__temporaryWIPNotice
