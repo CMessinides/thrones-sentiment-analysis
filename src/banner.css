@@ -1,0 +1,26 @@
+.c-banner {
+	@apply bg-emphasis-700;
+	@apply text-white;
+}
+
+.c-banner__container {
+	@apply items-start;
+	@apply p-5;
+}
+
+.c-banner__icon {
+	@apply mb-3;
+	@apply flex-shrink-0;
+	@apply text-emphasis-100;
+}
+
+@screen sm {
+	.c-banner__container {
+		@apply flex;
+	}
+
+	.c-banner__icon {
+		@apply mb-0;
+		@apply mr-3;
+	}
+}

@@ -1,8 +1,20 @@
+# Environment variables
 .env
+
+# Editor settings
 .vscode
+
+# RStudio data
 .Rproj.user
 .RData
 .Rhistory
+
+# Parcel files
 .cache
 dist
+
+# Packages
 node_modules
+
+# Logs
+*.log

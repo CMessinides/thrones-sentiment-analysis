@@ -1,0 +1,71 @@
+.c-cover {
+	@apply text-center;
+	@apply px-5;
+	@apply border-b-8;
+	@apply border-emphasis-700;
+	@apply border-double;
+}
+
+.c-cover__text {
+	@apply my-16;
+}
+
+@screen md {
+	@apply my-24;
+}
+
+.c-cover__title {
+	@apply font-bold;
+	@apply font-heading;
+	@apply leading-tight;
+	@apply text-grey-900;
+	@apply text-3xl;
+}
+
+@screen sm {
+	.c-cover__title {
+		@apply text-4xl;
+	}
+}
+
+@screen md {
+	.c-cover__title {
+		@apply text-5xl;
+	}
+}
+
+@screen lg {
+	.c-cover__title {
+		@apply text-6xl;
+	}
+}
+
+.c-cover__blurb {
+	@apply mt-5;
+	@apply text-lg;
+}
+
+@screen sm {
+	.c-cover__blurb {
+		@apply text-xl;
+	}
+}
+
+@screen md {
+	.c-cover__blurb {
+		@apply text-2xl;
+	}
+}
+
+.c-cover__byline {
+	@apply mt-5;
+	@apply text-sm;
+	@apply tracking-wider;
+	@apply uppercase;
+}
+
+@screen sm {
+	.c-cover__byline {
+		@apply text-base;
+	}
+}

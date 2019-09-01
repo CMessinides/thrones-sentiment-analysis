@@ -17,9 +17,9 @@ html.h-full.overflow-y-scroll.no-js(lang='en')
 		include src/icons.svg
 		//- Site header
 		header
-		aside.bg-emphasis-700.text-white
-			.o-container.o-container--wide.p-5(class="sm:flex items-start")
-				svg.c-icon.mb-3.flex-shrink-0.text-emphasis-100.border-4.rounded-full(width="24" height="24" class="sm:mb-0 sm:mr-3" style={ "border-color": "rgba(255,255,255,0.33)"})
+		aside.c-banner
+			.o-container.o-container--wide.c-banner__container
+				svg.c-icon.c-banner__icon.border-4.rounded-full(width="24" height="24" style={ "border-color": "rgba(255,255,255,0.33)"})
 					use(href="#icon-error")
 				p
 					| #[strong You are viewing a draft version of this essay.]
@@ -28,17 +28,17 @@ html.h-full.overflow-y-scroll.no-js(lang='en')
 			//- Essay body
 			article
 				//- Essay cover
-				header.text-center.px-5.border-b-8.border-emphasis-700.border-double
-					.my-16(class='md:my-24')
-						h1.o-container.o-container--wide.font-bold.font-heading.leading-tight.text-grey-900.text-3xl(class='sm:text-4xl md:text-5xl lg:text-6xl')
+				header.c-cover
+					.c-cover__text
+						h1.o-container.o-container--wide.c-cover__title
 							| The 
 							cite.italic.font-body.text-emphasis-700 Game of Thrones
 							|  Characters that Fans Love to&nbsp;Hate
 						.o-container
-							p.mt-5.text-lg(class='sm:text-xl md:text-2xl')
+							p.c-cover__blurb
 								| A sentiment analysis of over 300,000 Reddit comments reveals how fans #[em really]
 								| feel about characters from HBO&rsquo;s blockbuster series.
-							p.mt-5.text-sm.tracking-wider.uppercase(class='sm:text-base')
+							p.c-cover__byline
 								| A visual essay by 
 								a(href='https://www.cmessinides.com' rel='noopener' target='_blank') Cameron Messinides
 					small.text-base.inline-block.mb-5.text-emphasis-700.italic (Spoilers!)

@@ -27,6 +27,7 @@
     "core-js": "^3.2.1",
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-json-url-loader": "^0.1.2",
+    "parcel-plugin-purgecss": "^2.1.2",
     "pug": "^2.0.4"
   },
   "dependencies": {
