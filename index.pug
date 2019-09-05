@@ -48,6 +48,83 @@ html.h-full.overflow-y-scroll.no-js(lang='en')
 						include:markdown-it(html typographer) ./content/intro.md
 						//- A sentiment analysis primer
 						include:markdown-it(html typographer) ./content/what-is-sentiment-analysis.md
+				+exampleComments("Example Reddit Comments with Sentiment Scores")#sentiment-analysis-illustration-1
+					+exampleComment("Brienne_Fan_1", "54 minutes", 0.84)
+						| I&rsquo;m so happy brienne got knighted, she&rsquo;s come a longway and dealt with so much Bs, so proud of her.
+					+exampleComment("Didnt_Read_The_Books", "2 hours", -0.87)
+						| No death in this series has given me more feels then that&hellip;I&rsquo;m so scared of what is to come&hellip;
+				+textContent
+						//- Sentiment analysis primer (contd.)
+						:markdown-it(typographer)
+							In the first comment, words like "happy" and "proud" led to a
+							positive score. Likewise, in the second, words like "death" and
+							"scared" resulted in a negative one.
+
+							This project goes one step further by calculating a sentiment
+							score not only for each comment, but for each sentence that
+							mentions a significant character. Here's how VADER scored two
+							sentences that mention Cersei:
+				+exampleComments("Sentences about Cersei Lannister with Sentiment Scores")#sentiment-analysis-illustration-2
+					+exampleComment("I_<3_Lannisters", "4 days", 0.78)
+						| Cersei deserves to win she’s far smarter than anyone on the “good” side.
+					+exampleComment('Cersei_H8R', "4 days", -0.89)
+						| Cersei deserved a violent and painful death for all she has done.
+				+textContent
+					//- Sentiment analysis primer (contd.)
+					:markdown-it(typographer)
+						The scores turn out as expected: VADER gave a positive score to the
+						sentence praising Cersei and a negative score to the one wishing
+						her an agonizing end. But sentiment scores don't always line up so
+						neatly with the way human readers interpret a sentence. Many factors
+						contribute to a sentence's final sentiment score, and a positive or
+						negative rating doesn't always mean what we think it should mean.
+
+						We can see some of the limitations of sentiment analysis by taking a
+						look at two more sentences that mention Cersei:
+				+exampleComments("Sentences about Cersei Lannister with Confusing Sentiment Scores")#sentiment-analysis-illustration-3
+					+exampleComment("Dany_Over_Cersei", "3 weeks", 0.83)
+						| She truly wants to be a better ruler than Cersei, a better person.
+					+exampleComment("Lena_H_Fan", "1 month", -0.83)
+						| Lena Headey is just KILLING IT with her portrayal of Cersei losing her grip on reality.
+				+textContent
+					//- Sentiment analysis primer (contd.)
+					:markdown-it(typographer)
+						VADER classified the first sentence as a positive one for Cersei
+						because of words like "better" and "truly", but us humans reading
+						the same sentence would more likely conclude that it reflects
+						negatively on Cersei. We would also probably count this as a
+						positive sentiment for the unnamed "she" in the sentence, but a
+						computer can't assign a score to a character if she isn't
+						explicitly mentioned.
+
+						And in the opposite scenario, VADER gives a negative rating to
+						the second sentence, but we can clearly see it's a glowing
+						compliment&mdash;and not for Cersei the character, but for Lena
+						Headey the actor. Sentiment analysis can't tell the difference
+						between a sentence about a character and a sentence about
+						something unrelated that happens to mention the character. For
+						this reason, comments praising actors or [bashing the writing
+						in Season 8](https://www.vanityfair.com/hollywood/2019/05/game-of-thrones-season-8-remake-petition-hbo)
+						will muddy the waters when we try to look at sentiments for
+						individual characters.
+					aside
+						:markdown-it(html typographer)
+							One more cautionary tale about sentiment analysis:
+							an earlier draft of this essay included Ghost,
+							Jon's direwolf, as a character &mdash; that was, until I
+							checked the results and found that on average, sentences that
+							mentioned Ghost were by far the most negative of any character.
+							That's because the word "ghost" has [a moderately negative
+							sentiment rating of -1.3 in VADER](https://github.com/cjhutto/vaderSentiment/blob/b045da3c5a29ed130777a16dc78588f53da54a05/vaderSentiment/vader_lexicon.txt#L3254).
+
+							In an ideal world, I would use a sentiment analyzer tuned to the
+							language of <cite>Game of Thrones</cite>, where "Ghost"could be
+							a neutral word, but I have neither the expertise nor the
+							resources to create such a tool. VADER works well enough for 99
+							percent of characters in the series, but unfortunately for Ghost,
+							[we'll have to leave our dear direwolf behind](https://youtu.be/8JFwkRcpukk?t=173)
+							for this project.
+				+textContent
 						+__temporaryWIPNotice
 						//- Analysis of all comments
 						include:markdown-it(html typographer) ./content/the-big-picture.md

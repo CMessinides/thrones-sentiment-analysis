@@ -1,0 +1,56 @@
+.c-comment {
+	@apply flex;
+	@apply flex-col;
+}
+
+.c-comment__wrapper {
+	@apply flex-grow;
+}
+
+.c-comment__card {
+	@apply bg-white;
+	@apply py-5;
+	@apply pr-5;
+	@apply rounded;
+	@apply border;
+	@apply border-grey-300;
+	@apply h-full;
+	background: url("./static/reddit-arrows.svg") 12px 1.5rem / 16px no-repeat;
+	/* Calculate the left padding as (width of the background image) + 8px * 2 */
+	padding-left: 40px;
+}
+
+.c-comment__details {
+	@apply uppercase;
+	@apply tracking-wider;
+	@apply text-sm;
+	@apply font-bold;
+	@apply text-grey-600;
+}
+
+.c-comment__text {
+	@apply text-lg;
+	@apply italic;
+}
+
+.c-comment__score {
+	@apply ml-auto;
+	@apply flex;
+	@apply items-start;
+	@apply mt-1;
+}
+
+.c-comment__score-label {
+	@apply mr-3;
+	@apply uppercase;
+	@apply tracking-wider;
+	@apply text-sm;
+}
+
+.c-comment__score-amount {
+	@apply font-heading;
+	@apply font-bold;
+	@apply text-emphasis-700;
+	@apply text-4xl;
+	@apply leading-none;
+}

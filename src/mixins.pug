@@ -23,6 +23,29 @@ mixin textContent
 		.o-container.o-rich-text
 			block
 
+mixin exampleComments(caption="Comments")
+	figure.c-section.c-section--text&attributes(attributes)
+		table.o-container.max-w-3xl
+			caption.sr-only= caption
+			thead.sr-only
+				tr
+					th(scope="col") Comment ID
+					th(scope="col") Comment
+					th(scope="col") Sentiment Score
+			tbody.c-comments
+				block
+
+mixin exampleComment(username="Reddit_User", age="1 minute", score="0.0")
+	tr.c-comment.c-comments__item
+		td.c-comment__wrapper
+			blockquote.c-comment__card
+				span.c-comment__details(aria-hidden="true") #[span= username] &bull; #[time #{age} ago]
+				p.c-comment__text
+					block
+		td.c-comment__score
+			span.c-comment__score-label(aria-hidden="true") Sentiment Score:
+			span.c-comment__score-amount= score
+
 mixin __temporaryWIPNotice
 	p
 		small.italic.text-grey-600 [WIP &mdash; more coming soon.]

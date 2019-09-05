@@ -1,0 +1,13 @@
+.c-comments {
+	@apply flex;
+	@apply flex-wrap;
+	@apply -m-2;
+}
+
+.c-comments__item {
+	@apply p-2;
+	@apply flex-shrink-0;
+	@apply flex-grow;
+	flex-basis: 280px;
+	max-width: 24rem;
+}
