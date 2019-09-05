@@ -1,0 +1,53 @@
++textContent
+	h2#breakdown-by-character The Breakdown by Character
+	
+	+__temporaryWIPNotice
+
+	aside
+		p In the following charts:
+		ul.c-legend
+			li.c-legend__item
+				figure.c-legend__figure
+					svg.c-legend__icon(width="48" height="48" aria-labelled-by="legend-overall-line-title")
+						title#legend-overall-line-title Transparent purple line
+						path.c-chart-line.c-chart-line--subtle(d="M0,10L2,12L13,27L24,23L35,33L46,23L48,22" aria-hidden="true")
+					figcaption.c-legend__caption
+						:markdown-it(typographer)
+							The **line** shows the change in overall average sentiment by episode, just like the previous chart. It's a good measure of **how fans reacted to a particular episode**.
+			li.c-legend__item
+				figure.c-legend__figure
+					svg.c-legend__icon(width="48" height="48" aria-labelled-by="legend-point-title")
+						title#legend-point-title Purple points with error bars
+						g.c-chart-point(aria-hidden="true" transform="translate(24,24)")
+							line.c-chart-point__interval(x1="0" x2="0" y1="-24" y2="24")
+							circle.c-chart-point__center(r="3")
+						g.c-chart-point(aria-hidden="true" transform="translate(13,17)")
+							line.c-chart-point__interval(x1="0" x2="0" y1="-8" y2="8")
+							circle.c-chart-point__center(r="3")
+						g.c-chart-point(aria-hidden="true" transform="translate(35,42)")
+							line.c-chart-point__interval(x1="0" x2="0" y1="-27" y2="27")
+							circle.c-chart-point__center(r="3")
+					figcaption.c-legend__caption
+						:markdown-it(typographer)
+							Each **point** represents the estimated average sentiment score of sentences mentioning the character in the comments about a given episode. The bars extending above and below each point represent a 95% [confidence interval](https://www.graphpad.com/guides/prism/7/statistics/stat_more_about_confidence_interval.htm?toc=0) for that estimate. It's a good measure of **how fans reacted to the character in a particular episode**.
+			li.c-legend__item
+				figure.c-legend__figure
+					svg.c-legend__icon(width="48" height="48" aria-labelled-by="legend-area-title")
+						title#legend-area-title Transparent purple circles
+						g.c-chart-point(aria-hidden="true" transform="translate(13,17)")
+							circle.c-chart-point__area(r=0.16*75)
+						g.c-chart-point(aria-hidden="true" transform="translate(35,42)")
+							circle.c-chart-point__area(r=0.21*75)
+					figcaption.c-legend__caption
+						:markdown-it(typographer)
+							Each point also has a surrounding **area**. The size of the area is proportionate to how frequently the character was mentioned in the comments about a given episode. It's a good measure of **how much the character dominated the conversation about a particular episode**.
+									
++visualization('jon-snow-viz')
+
++textContent
+	+__temporaryWIPNotice
+
++visualization('searchable-character-viz')
+
++textContent
+	+__temporaryWIPNotice
