@@ -28,9 +28,7 @@
 
 +textContent
 	:markdown-it(typographer)
-		The scores turn out as expected: VADER gave a positive score to the sentence praising Cersei and a negative score to the one wishing her an agonizing end. But sentiment scores don't always line up so neatly with the way human readers interpret a sentence. Many factors contribute to a sentence's final sentiment score, and a positive or negative rating doesn't always mean what we think it should mean.
-
-		We can see some of the limitations of sentiment analysis by taking a look at two more sentences that mention Cersei:
+		The scores turn out as expected: VADER gave a positive score to the sentence praising Cersei and a negative score to the one wishing her an agonizing end. But sentiment scores don't always line up so neatly with the way human readers interpret a sentence. Many factors contribute to a sentence's final sentiment score, and a positive or negative rating doesn't always mean what we think it should mean. For instance, take a look at two more sentences that mention Cersei:
 
 +exampleComments("Sentences about Cersei Lannister with Confusing Sentiment Scores")#sentiment-analysis-illustration-3
 	+exampleComment("Dany_Over_Cersei", "3 weeks", 0.83)
@@ -51,5 +49,5 @@
 			In an ideal world, I would use a sentiment analyzer tuned to the language of <cite>Game of Thrones</cite>, where "Ghost"could be a neutral word, but I have neither the expertise nor the resources to create such a tool. VADER works well enough for 99 percent of characters in the series, but unfortunately for Ghost, [we'll have to leave our dear direwolf behind](https://youtu.be/8JFwkRcpukk?t=173) for this project.
 
 	:markdown-it(html typographer)
-		However, even with individual sentiment scores that can seem hit or miss, sentiment analysis is still a useful technique in the aggregate. Looking at the *average* sentiment scores of many comments or sentences can tell us a great deal about trends in fan reactions. Before diving into individual characters, let's step back and get some context on how fan sentiments toward <cite>Game of Thrones</cite> as a whole changed over time.
+		However, even with individual sentiment scores that can seem hit or miss, sentiment analysis is still a useful technique in the aggregate. Looking at the *average* sentiment scores of many comments or sentences can tell us a great deal about trends in fan reactions. Before diving into individual characters, let's step back and get some context on how sentiments toward <cite>Game of Thrones</cite> as a whole changed over time.
 		
