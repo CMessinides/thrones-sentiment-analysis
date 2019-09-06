@@ -100,6 +100,9 @@ yarn scripts:analyze
 # Run scripts/transform.py
 yarn scripts:transform
 
+# Run scripts/explore.py (will launch a Python REPL)
+yarn scripts:explore
+
 # Run all scripts in sequence
 yarn scripts:all
 ```
@@ -137,6 +140,8 @@ Scripts (`./scripts`)
 - **`analyze.py`** uses VADER to calculate sentiment scores from all the scraped comments as well as from any sentence in those comments which mentions one of the characters in `data/characters.json` (see [&ldquo;Datasets&rdquo;](#heading-data)). This script is responsible for updating the records in `data/comment-sentiments.csv` and `data/character-mentions.csv`.
 
 - **`transform.py`** uses the prior sentiment analysis to produce a data file with mean scores, confidence intervals, and mention proportions for the client visualization/interactive. This script is responsible for updating `data/mean-scores.json` (see [&ldquo;Datasets&rdquo;](#heading-data)).
+
+- **`explore.py`** loads the data, declares some helpful views of it, and defines helper functions for querying it. This script is designed to be used interactively through a Python REPL (i.e. `python -i explore.py`). 
 
 <h2 id="heading-citations">Citations</h2>
 

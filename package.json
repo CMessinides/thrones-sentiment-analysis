@@ -1,45 +1,46 @@
 {
-  "name": "thrones-sentiment-analysis",
-  "version": "1.0.0",
-  "description": "A sentiment analysis of Reddit comments about HBO's Game of Thrones.",
-  "main": "index.html",
-  "author": "Cameron Messinides <me@cmessinides.com>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/CMessinides/thrones-sentiment-analysis.git"
-  },
-  "license": "MIT",
-  "private": true,
-  "scripts": {
-    "scripts:scrape": "pipenv run python scripts/scrape.py",
-    "scripts:analyze": "pipenv run python scripts/analyze.py",
-    "scripts:transform": "pipenv run python scripts/transform.py",
-    "scripts:all": "yarn scripts:scrape && yarn scripts:analyze && yarn scripts:transform",
-    "dev": "parcel serve index.pug",
-    "build": "parcel build index.pug"
-  },
-  "browserslist": "> 0.25%, not dead",
-  "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
-    "autoprefixer": "^9.6.1",
-    "core-js": "^3.2.1",
-    "jstransformer-markdown-it": "^2.1.0",
-    "parcel-bundler": "^1.12.3",
-    "parcel-plugin-json-url-loader": "^0.1.2",
-    "parcel-plugin-purgecss": "^2.1.2",
-    "pug": "^2.0.4"
-  },
-  "dependencies": {
-    "classnames": "^2.2.6",
-    "d3-scale": "^3.0.1",
-    "d3-shape": "^1.3.5",
-    "downshift": "^3.2.12",
-    "lodash.merge": "^4.6.2",
-    "lunr": "^2.3.6",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "tailwindcss": "^1.1.2"
-  }
+	"name": "thrones-sentiment-analysis",
+	"version": "1.0.0",
+	"description": "A sentiment analysis of Reddit comments about HBO's Game of Thrones.",
+	"main": "index.html",
+	"author": "Cameron Messinides <me@cmessinides.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/CMessinides/thrones-sentiment-analysis.git"
+	},
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"scripts:scrape": "pipenv run python scripts/scrape.py",
+		"scripts:analyze": "pipenv run python scripts/analyze.py",
+		"scripts:transform": "pipenv run python scripts/transform.py",
+		"scripts:explore": "pipenv run python -i scripts/explore.py",
+		"scripts:all": "yarn scripts:scrape && yarn scripts:analyze && yarn scripts:transform && yarn scripts:explore",
+		"dev": "parcel serve index.pug",
+		"build": "parcel build index.pug"
+	},
+	"browserslist": "> 0.25%, not dead",
+	"devDependencies": {
+		"@babel/core": "^7.5.5",
+		"@babel/preset-env": "^7.5.5",
+		"@babel/preset-react": "^7.0.0",
+		"autoprefixer": "^9.6.1",
+		"core-js": "^3.2.1",
+		"jstransformer-markdown-it": "^2.1.0",
+		"parcel-bundler": "^1.12.3",
+		"parcel-plugin-json-url-loader": "^0.1.2",
+		"parcel-plugin-purgecss": "^2.1.2",
+		"pug": "^2.0.4"
+	},
+	"dependencies": {
+		"classnames": "^2.2.6",
+		"d3-scale": "^3.0.1",
+		"d3-shape": "^1.3.5",
+		"downshift": "^3.2.12",
+		"lodash.merge": "^4.6.2",
+		"lunr": "^2.3.6",
+		"react": "^16.9.0",
+		"react-dom": "^16.9.0",
+		"tailwindcss": "^1.1.2"
+	}
 }
