@@ -1,6 +1,7 @@
 .c-comments {
 	@apply flex;
 	@apply flex-wrap;
+	@apply justify-center;
 	@apply -m-2;
 }
 

@@ -1,12 +1,19 @@
 +textContent
 	h2#the-big-picture A Look at the Big Picture
 
-	+__temporaryWIPNotice
+	:markdown-it(typographer)
+		To better understand how fan reactions to the show changed over time, let's chart the average sentiment score of the comments for each episode.
 
 	aside
-		p Hover/tap anywhere on the chart to see more detailed information about an episode.			
+		p Hover/tap anywhere on the chart below to see more detailed information about an episode.
 
 +visualization('overall-scores-viz')
 
 +textContent
-	+__temporaryWIPNotice
+	:markdown-it(html typographer)
+		Overall, fan sentiments toward <cite>Game of Thrones</cite> trended negative over time. With a mean score of 0.002, Season 5, Episode 3 marks the last time that average sentiment was positive. The trend line also tanks significantly after Season 8, Episode 3, which makes sense: fans questioned [the episode's murky lighting](https://www.vice.com/en_us/article/zmpnma/was-last-nights-game-of-thrones-too-dark-or-does-your-screen-suck), and criticism of writing choices and [a misplaced coffee cup](https://www.theguardian.com/tv-and-radio/2019/may/06/coffee-is-coming-fans-spot-starbucks-cup-in-game-of-thrones) only continued from there.
+
+		Negative scores don't have to mean ire at the showrunners, though. Sharp drops in average sentiment also tend to occur at key plot points&mdash;I've labelled some above, but you can probably pick out more just by looking for steep dives into negative territory. The infamous Red Wedding in Season 3, Episode 9 is the most obvious example of how fans' collective shock and grief can affect the average score for an entire episode. 
+
+		This overall trend will serve as our baseline for comparison. Now let's get to the fun part: examining the reactions to individual characters.
+
