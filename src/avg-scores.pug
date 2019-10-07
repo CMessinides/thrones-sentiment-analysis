@@ -1,0 +1,52 @@
+include ./mixins
+include ./data-table
+
+-
+	const sortOptions = {
+		"score-asc": "Lowest score to highest",
+		"score-desc": "Highest score to lowest"
+	}
+- 
+	const columns = [
+		{
+			key: "character",
+			name: "Character",
+			type: "char",
+		},
+		{
+			key: "mean",
+			name: "Avg. Score",
+			type: "float",
+			align: "right",
+			primary: true
+		}
+	]
+-
+	const avgRows = avgScoreByChar.map(row => ({
+		character: row.name,
+		mean: parseFloat(row.mean).toFixed(3)
+	}))
+
++textContent
+	h2#avg-scores Average Scores
+
+	+__temporaryWIPNotice
+
+.c-section
+	.o-container
+		+dataTable({ kicker: "Characters Ranked by", title: "Average Sentiment Score (All Episodes)", id: "avg-scores-table", columns: [].concat(columns), rows: avgRows, sortOptions: sortOptions })
+
++textContent
+	+__temporaryWIPNotice
+
+- const weightedColumns = [].concat(columns);
+- weightedColumns[1].name = "Weighted Avg."
+-
+	const weightedRows = weightedAvgScoreByChar.map(row => ({
+		character: row.name,
+		mean: parseFloat(row.weighted_mean).toFixed(3)
+	}))
+
+.c-section
+	.o-container
+		+dataTable({ kicker: "Average Character Scores", title: "Weighted by Number of Mentions", id: "weighted-avg-scores-table", columns: weightedColumns, rows: weightedRows, sortOptions: sortOptions })

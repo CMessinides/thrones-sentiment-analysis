@@ -22,24 +22,10 @@
 }
 
 .c-search__input {
-	@apply bg-subtle-200;
-	@apply text-subtle-700;
 	@apply block;
-	@apply p-3;
 	@apply pl-10;
 	@apply w-full;
 	@apply leading-none;
-}
-
-.c-search__input:focus {
-	outline: 5px transparent solid;
-	box-shadow: 0 0 0 1px theme('colors.emphasis.700');
-}
-
-.c-search__input::placeholder {
-	@apply italic;
-	color: inherit;
-	opacity: 0.75;
 }
 
 .c-search__suggestions {

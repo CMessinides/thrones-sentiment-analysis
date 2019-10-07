@@ -1,0 +1,17 @@
+.c-button {
+	@apply inline-block;
+	@apply font-bold;
+	@apply rounded;
+	@apply px-3;
+	@apply py-2;
+}
+
+.c-button:focus {
+	outline: 5px transparent solid;
+	box-shadow: 0 0 0 1px config('colors.emphasis.700');
+}
+
+.c-button--subtle {
+	@apply bg-subtle-200;
+	@apply text-subtle-700;
+}

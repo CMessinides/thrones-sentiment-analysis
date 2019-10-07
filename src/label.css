@@ -1,0 +1,8 @@
+.c-label {
+	@apply text-xs;
+	@apply font-bold;
+	@apply block;
+	@apply mb-1;
+	@apply uppercase;
+	@apply tracking-wider;
+}

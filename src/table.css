@@ -1,0 +1,48 @@
+.c-table {
+	@apply relative;
+	@apply w-full;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+.c-table__head .c-table__cell {
+	vertical-align: bottom;
+}
+
+.c-table__cell--header {
+	@apply uppercase;
+	@apply tracking-wider;
+	@apply text-xs;
+	text-align: inherit;
+}
+
+.c-table__body .c-table__row:hover {
+	@apply bg-subtle-200;
+}
+
+.c-table__cell {
+	@apply p-2;
+	vertical-align: top;
+}
+
+.c-table__cell--header {
+	@apply bg-subtle-100;
+	@apply border-b-4;
+	@apply border-double;
+	@apply border-subtle-600;
+	position: sticky;
+	top: 0;
+}
+
+.c-table__cell--emphasized {
+	@apply text-grey-900;
+}
+
+.c-table--numbered {
+	counter-reset: table-rows;
+}
+
+.c-table--numbered td:first-child::after {
+	counter-increment: table-rows;
+	content: counter(table-rows);
+}

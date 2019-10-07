@@ -1,6 +1,12 @@
 @import "./base.css";
 
 @import "./components.css";
+@import "./container.css";
+@import "./link.css";
+@import "./icon.css";
+@import "./label.css";
+@import "./input.css";
+@import "./button.css";
 @import "./viz.css";
 @import "./chart.css";
 @import "./chart-label.css";
@@ -9,9 +15,6 @@
 @import "./tick.css";
 @import "./tooltip.css";
 @import "./search.css";
-@import "./container.css";
-@import "./link.css";
-@import "./icon.css";
 @import "./rich-text.css";
 @import "./section.css";
 @import "./alert.css";
@@ -21,6 +24,8 @@
 @import "./legend.css";
 @import "./comments.css";
 @import "./comment.css";
+@import "./table.css";
+@import "./data-table.css";
 
 @import "./utilities.css";
 

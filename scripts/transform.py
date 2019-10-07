@@ -109,6 +109,6 @@ avg_score_by_char.to_csv(
 weighted_avg_scores_by_char.to_csv(
     DATA_DIR / "weighted-avg-score-by-character.csv",
     index_label="name",
-    header=["weigted_mean"],
+    header=["weighted_mean"],
 )
 

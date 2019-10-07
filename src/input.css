@@ -1,0 +1,25 @@
+.c-input {
+	@apply bg-subtle-200;
+	@apply text-subtle-700;
+	@apply px-3;
+	@apply py-2;
+	@apply rounded;
+	@apply shadow-inner;
+	@apply leading-none;
+}
+
+.c-input:focus {
+	outline: 5px transparent solid;
+	box-shadow: 0 0 0 1px theme('colors.emphasis.700');
+}
+
+.c-input::placeholder {
+	@apply italic;
+	color: inherit;
+	opacity: 0.75;
+}
+	
+.c-input[disabled] {
+	@apply opacity-50;
+	cursor: not-allowed;
+}

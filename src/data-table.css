@@ -1,0 +1,8 @@
+.c-data-table__controls,
+.c-data-table__table {
+	@apply mt-5;
+}
+
+.c-data-table__col-character {
+	width: 75%;
+}

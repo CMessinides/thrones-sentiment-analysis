@@ -1,0 +1,42 @@
+mixin characterCell(name)
+	- const thumb = charMetadata[name].thumbnail
+	.flex.items-start
+		.mr-2.rounded-full.bg-subtle-200.overflow-hidden.flex-shrink-0(style="height:1.5em;width:1.5em")
+			if (thumb)
+				img.h-full.w-full.object-cover(src=thumb alt="" aria-hidden="true")
+		= name
+
+mixin dataTable({ id, title, kicker, rows=[], columns=[], sortOptions } = {})
+	- columns.unshift({ key: "rank", name: "Rank", type: "int" });
+	.c-viz.c-data-table(id=id data-table)
+		.c-viz__header
+			h2.c-viz__title
+				if kicker
+					span.c-viz__kicker= kicker
+				= title
+		.c-data-table__controls
+			if sortOptions
+				- const selectId = `${id}-sort-by`
+				label.c-label("for"=selectId) Sort
+				select.c-select.c-input(id=selectId data-table-control="sort" disabled)
+					each text, value in sortOptions
+						option(value=value)= text
+		table.c-table.c-table--numbered.c-data-table__table
+			thead.c-table__head
+				tr.c-table__row
+					each col in columns
+						th.c-table__cell.c-table__cell--header(data-table-col=col.key data-table-col-type=col.type || "string" class=`c-data-table__col-${col.key} ${col.align ? "text-" + col.align : ""}`)= col.name || col.key
+			tbody.c-table__body(data-table-area="rows")
+				each row in rows
+					tr.c-table__row
+						// empty cell to contain rank number (provided by CSS)
+						td.c-table__cell
+						each value, key in row
+							- const col = columns.find(col => col.key === key) || {}
+							td.c-table__cell(class=`${col.primary ? "c-table__cell--emphasized" : ""} ${col.align ? "text-" + col.align : ""}`)
+								if (col.type === "char")
+									+characterCell(value)
+								else
+									= value
+		.text-base.text-center
+			button.c-button.c-button--subtle.mt-5.hidden(data-table-control="expand" type="button") Show all
